@@ -67,3 +67,10 @@
 
 [2026-03-03 21:30:25] BACKUP: no changes
 
+[2026-03-03 21:30:51] BACKUP
+   ai-backup.log                     |   2 +
+   scripts/ai-backup                 |  74 +++++++++++-----------
+   scripts/ai-restore                | 128 +++++++++++++++++++-------------------
+   skills/TEST-backup-skill/SKILL.md |   6 --
+   4 files changed, 103 insertions(+), 107 deletions(-)
+
