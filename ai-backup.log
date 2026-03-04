@@ -182,3 +182,7 @@
    skills/ai-backup-mac/SKILL.md      | 14 +++++++++++++-
    2 files changed, 28 insertions(+), 1 deletion(-)
 
+[2026-03-03 23:03:46] RESTORE from 21cd565 backup: 2026-03-03 22:10:56 (2026-03-03 22:10:56 -0700)
+  Renamed (bad files preserved at):
+    \~/.openclaw/openclaw.json.bak-20260303-230346
+
