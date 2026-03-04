@@ -44,3 +44,9 @@
    test-backup.sh    | 183 +++++++++++++++++++++++++++++-------------------------
    2 files changed, 108 insertions(+), 94 deletions(-)
 
+[2026-03-03 21:28:59] RESTORE from 53ee90f backup: 2026-03-03 21:28:57 (2026-03-03 21:28:57 -0700)
+  Renamed (bad files preserved at):
+    \~/.agents/skills.bak-20260303-212859
+    \~/Library/Application Support/Claude/claude_desktop_config.json.bak-20260303-212859
+    \~/.claude.bak-20260303-212859
+
