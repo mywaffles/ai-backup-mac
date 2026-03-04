@@ -8,13 +8,9 @@ CONF="$REPO/backup-paths.conf"
 LOG="$REPO/ai-backup.log"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
-# ── Guards ───────────────────────────────────────────────────────────────────
-[ -d "$REPO/.git" ] || { echo "❌ Repo not found at $REPO"; exit 1; }
-[ -f "$CONF" ]      || { echo "❌ Config not found at $CONF"; exit 1; }
+[ -d "$REPO/.git" ] || { echo "Repo not found at $REPO"; exit 1; }
+[ -f "$CONF" ]      || { echo "Config not found at $CONF"; exit 1; }
 
-# ── Shared: resolve dest path for a source path ──────────────────────────────
-# Files  → files/<sanitised-parent>/<filename>
-# Dirs   → <dirname>/
 dest_for() {
   local src="$1"
   local name; name=$(basename "$src")
@@ -26,57 +22,57 @@ dest_for() {
   fi
 }
 
-echo "🔄 ai-backup starting: $TIMESTAMP"
+echo "ai-backup starting: $TIMESTAMP"
 echo ""
 
-# ── Sync each path ───────────────────────────────────────────────────────────
+# OpenClaw workspace has an embedded .git — sync into files/ to avoid git confusion
+OC_WORKSPACE="$HOME/.openclaw/workspace"
+if [ -d "$OC_WORKSPACE" ]; then
+  mkdir -p "$REPO/files/openclaw-workspace"
+  rsync -a --delete --exclude='.git' "$OC_WORKSPACE/" "$REPO/files/openclaw-workspace/"
+  echo "  DIR ~/.openclaw/workspace -> files/openclaw-workspace/"
+fi
+
 while IFS= read -r line; do
   [[ "$line" =~ ^[[:space:]]*$  ]] && continue
   [[ "$line" =~ ^[[:space:]]*# ]] && continue
-
   SOURCE="${line/#\~/$HOME}"
-
   if [ ! -e "$SOURCE" ]; then
-    echo "⚠️  Skipping (not found): $line"
+    echo "  SKIP (not found): $line"
     continue
   fi
-
   DEST_REL=$(dest_for "$SOURCE")
   DEST="$REPO/$DEST_REL"
-
   if [ -f "$SOURCE" ]; then
     mkdir -p "$(dirname "$DEST")"
     cp "$SOURCE" "$DEST"
-    echo "  📄 $line → $DEST_REL"
+    echo "  FILE $line -> $DEST_REL"
   else
     mkdir -p "$DEST"
     rsync -a --delete \
-      --exclude='*.pyc' --exclude='__pycache__' --exclude='.DS_Store' \
-      --exclude='*.log' --exclude='statsig/' --exclude='ide/' \
+      --exclude='.git' --exclude='*.pyc' --exclude='__pycache__' \
+      --exclude='.DS_Store' --exclude='*.log' --exclude='statsig/' --exclude='ide/' \
       "$SOURCE/" "$DEST/"
-    echo "  📁 $line → $DEST_REL/"
+    echo "  DIR  $line -> $DEST_REL/"
   fi
 done < "$CONF"
 
-# ── Commit & push ─────────────────────────────────────────────────────────────
 echo ""
 cd "$REPO"
+git add -A
 
-if git diff --quiet && git diff --staged --quiet && \
-   [ -z "$(git ls-files --others --exclude-standard)" ]; then
-  echo "✅ Nothing changed since last backup."
+if git diff --staged --quiet; then
+  echo "Nothing changed since last backup."
   printf '[%s] BACKUP: no changes\n\n' "$TIMESTAMP" >> "$LOG"
   exit 0
 fi
 
-git add -A
 CHANGES=$(git diff --staged --stat)
-echo "📝 Changes:"
+echo "Changes:"
 echo "$CHANGES"
-
 git commit -m "backup: $TIMESTAMP"
 echo ""
-echo "⬆️  Pushing to GitHub..."
+echo "Pushing to GitHub..."
 git push
 
 {
@@ -90,4 +86,4 @@ git diff --staged --quiet || git commit -m "log: backup at $TIMESTAMP"
 git push
 
 echo ""
-echo "✅ Backup complete: $TIMESTAMP"
+echo "Backup complete: $TIMESTAMP"
