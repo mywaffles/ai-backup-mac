@@ -191,9 +191,10 @@ check_grep "warning says not overwritten" "NOT be overwritten" /tmp/ai-restore-w
 # -- 11. Test: restore reads backup-paths.conf from snapshot
 section "Test: restore uses backup-paths.conf from snapshot"
 
-echo "~/FAKE-PATH-SHOULD-NOT-RESTORE" >> "$CONF"
+CONF_FILE="$REPO/backup-paths.conf"
+echo "~/FAKE-PATH-SHOULD-NOT-RESTORE" >> "$CONF_FILE"
 echo "y" | bash /opt/homebrew/bin/ai-restore --last > /tmp/ai-restore-snapconf.log 2>&1 || true
-grep -v "FAKE-PATH" "$CONF" > /tmp/conf-cleaned && mv /tmp/conf-cleaned "$CONF"
+grep -v "FAKE-PATH" "$CONF_FILE" > /tmp/conf-cleaned && mv /tmp/conf-cleaned "$CONF_FILE"
 check_no_grep "snapshot conf used (fake path ignored)" "FAKE-PATH-SHOULD-NOT-RESTORE" /tmp/ai-restore-snapconf.log
 
 # -- Results ───────────────────────────────────────────────────────────────────
