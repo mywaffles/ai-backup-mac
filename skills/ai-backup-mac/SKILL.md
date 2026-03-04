@@ -32,7 +32,19 @@ echo "~/.config/sometool/config.json" >> ~/ai-backup-mac/backup-paths.conf
 ai-backup
 ```
 
+After adding a new path, update the backup section in AGENTS.md to reflect it:
+
+```bash
+# Read current backed-up paths (excluding comments/blanks)
+grep -v '^#' ~/ai-backup-mac/backup-paths.conf | grep -v '^$'
+```
+
+Then edit `~/.openclaw/workspace/AGENTS.md` — update the bullet list under
+**"🛡️ Before Changing Config Files"** to include the new path.
+Use `gog` to save the change if the workspace is synced to Drive, otherwise
+edit the file directly. Run `ai-backup` again to snapshot the updated AGENTS.md.
+
 ## Before checking in changes to backup scripts
 ```bash
-bash ~/ai-backup-mac/test-backup.sh   # must be 33/33
+bash ~/ai-backup-mac/test-backup.sh   # must be 36/36
 ```

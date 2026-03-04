@@ -17,6 +17,21 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## 🛡️ Before Changing Config Files
+
+**ALWAYS run `ai-backup` before modifying:**
+- `~/.agents/skills/` (all custom skills)
+- `~/Library/Application Support/Claude/` (Desktop config + git-worktrees)
+- `~/.claude/` (Claude Code settings, plugins)
+- `~/.openclaw/openclaw.json` (OpenClaw config)
+- `~/.openclaw/workspace/` (SOUL.md, AGENTS.md, USER.md, memory/, etc.)
+- `~/.openclaw/agents/main/agent/` (agent config)
+- `~/.openclaw/identity/` (device identity)
+- `~/.openclaw/cron/jobs.json` (scheduled tasks)
+- Any path in `~/ai-backup-mac/backup-paths.conf`
+
+No exceptions. If something breaks, Matt can `ai-restore --last` to roll back.
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
