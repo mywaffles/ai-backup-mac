@@ -37,3 +37,4 @@ skills/context7/.env
 
 # Exclude embedded git repos in backed-up content
 workspace/.git
+workspace/.git

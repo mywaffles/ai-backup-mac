@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.1",
+    "lastTouchedAt": "2026-03-03T03:57:08.369Z"
+  },
+  "env": {
+    "OPENROUTER_API_KEY": "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"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/anthropic/claude-sonnet-4.5",
+        "fallbacks": [
+          "openrouter/anthropic/claude-opus-4.6",
+          "openrouter/google/gemini-2.5-flash-preview"
+        ]
+      },
+      "models": {
+        "openrouter/openrouter/auto": {},
+        "openrouter/anthropic/claude-sonnet-4.5": {},
+        "openrouter/google/gemini-2.5-flash-preview": {},
+        "openrouter/google/gemini-3-pro": {},
+        "openrouter/deepseek/deepseek-chat": {},
+        "openrouter/anthropic/claude-opus-4.6": {}
+      },
+      "memorySearch": {
+        "enabled": false
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "identity": {
+          "name": "Gay Deceiver",
+          "emoji": "🚗"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "perplexity",
+        "perplexity": {
+          "apiKey": "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",
+          "baseUrl": "https://openrouter.ai/api/v1",
+          "model": "perplexity/sonar-pro"
+        }
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "bluebubbles": {
+      "enabled": true,
+      "serverUrl": "http://localhost:1234",
+      "password": "kFLgsMGaEuK8jtMuDjUq",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "+17022739196"
+      ],
+      "groupAllowFrom": [
+        "+17022739196"
+      ],
+      "groupPolicy": "allowlist"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "token": "Oo10NdDx1cVqsoWf3CCcnSp2M_7N5nkO"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "bluebubbles": {
+        "enabled": true
+      }
+    }
+  }
+}
