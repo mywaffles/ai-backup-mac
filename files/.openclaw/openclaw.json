@@ -4,7 +4,7 @@
     "lastTouchedAt": "2026-03-03T03:57:08.369Z"
   },
   "env": {
-    "OPENROUTER_API_KEY": "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"
+    "OPENROUTER_API_KEY": "op://AI Agents/OpenRouter API Key - Mac Mini/credential"
   },
   "agents": {
     "defaults": {
@@ -43,7 +43,7 @@
         "enabled": true,
         "provider": "perplexity",
         "perplexity": {
-          "apiKey": "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",
+          "apiKey": "op://AI Agents/OpenRouter API Key - Mac Mini/credential",
           "baseUrl": "https://openrouter.ai/api/v1",
           "model": "perplexity/sonar-pro"
         }
@@ -60,7 +60,7 @@
     "bluebubbles": {
       "enabled": true,
       "serverUrl": "http://localhost:1234",
-      "password": "kFLgsMGaEuK8jtMuDjUq",
+      "password": "op://AI Agents/BlueBubbles Server/password",
       "dmPolicy": "allowlist",
       "allowFrom": [
         "+17022739196"
@@ -76,7 +76,7 @@
     "mode": "local",
     "bind": "loopback",
     "auth": {
-      "token": "Oo10NdDx1cVqsoWf3CCcnSp2M_7N5nkO"
+      "token": "op://AI Agents/OpenClaw Gateway Auth Token/credential"
     }
   },
   "plugins": {
