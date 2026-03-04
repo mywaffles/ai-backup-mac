@@ -160,3 +160,9 @@
    identity/device-auth.json     |  2 +-
    5 files changed, 26 insertions(+), 5 deletions(-)
 
+[2026-03-03 22:08:00] RESTORE from 1c91f7d backup: 2026-03-03 22:07:59 (2026-03-03 22:07:59 -0700)
+  Renamed (bad files preserved at):
+    \~/.agents/skills.bak-20260303-220800
+    \~/Library/Application Support/Claude/claude_desktop_config.json.bak-20260303-220800
+    \~/.claude.bak-20260303-220800
+
