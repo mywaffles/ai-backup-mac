@@ -29,3 +29,12 @@
     ~/Library/Application Support/Claude/git-worktrees.json.bak-20260303-212419
     ~/.claude.bak-20260303-212419
 
+[2026-03-03 21:26:05] RESTORE from 4720b61 backup: 2026-03-03 21:26:04 (2026-03-03 21:26:04 -0700)
+  Renamed (bad files preserved at):
+    ~/.agents/skills.bak-20260303-212605
+    ~/Library/Application Support/Claude/claude_desktop_config.json.bak-20260303-212605
+    ~/Library/Application Support/Claude/config.json.bak-20260303-212605
+    ~/Library/Application Support/Claude/window-state.json.bak-20260303-212605
+    ~/Library/Application Support/Claude/git-worktrees.json.bak-20260303-212605
+    ~/.claude.bak-20260303-212605
+
