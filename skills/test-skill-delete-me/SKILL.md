@@ -1,5 +1,5 @@
 ---
 name: test-skill-delete-me
-description: Test skill.
+description: Test.
 ---
 # Original Version
