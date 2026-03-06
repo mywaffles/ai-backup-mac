@@ -38,3 +38,8 @@ skills/context7/.env
 # Exclude embedded git repos in backed-up content
 workspace/.git
 workspace/.git
+
+# OpenClaw device identity — contains private key and operator token
+identity/
+identity/device.json
+identity/device-auth.json
