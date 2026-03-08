@@ -7,7 +7,7 @@
       "name": "talk-mode-fix-watch",
       "enabled": true,
       "createdAtMs": 1772638112308,
-      "updatedAtMs": 1772931764702,
+      "updatedAtMs": 1772935351711,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -25,11 +25,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772935346068,
-        "lastRunAtMs": 1772931758126,
+        "nextRunAtMs": 1772938946068,
+        "lastRunAtMs": 1772935346074,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 6576,
+        "lastDurationMs": 5637,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false

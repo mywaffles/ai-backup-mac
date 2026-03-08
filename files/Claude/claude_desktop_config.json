@@ -20,7 +20,7 @@
     "quickEntryShortcut": "off",
     "coworkScheduledTasksEnabled": true,
     "ccdScheduledTasksEnabled": true,
-    "sidebarMode": "chat",
+    "sidebarMode": "task",
     "coworkWebSearchEnabled": true
   }
 }
