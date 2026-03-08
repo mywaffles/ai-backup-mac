@@ -389,3 +389,336 @@
    skills/talking-parents-matt/SKILL.md               |  300 +
    190 files changed, 26624 insertions(+), 64 deletions(-)
 
+[2026-03-07 18:23:45] BACKUP
+   .claude/backups/.claude.json.backup.1772845514367  |   17 +
+   .claude/backups/.claude.json.backup.1772845660802  |   73 ++
+   .claude/backups/.claude.json.backup.1772846114439  |   74 ++
+   .../debug/016e91e0-29b7-4341-9a4a-96cc6d4878e4.txt |   12 +
+   .../debug/04ce8ac4-2de2-448d-b5d7-5cad8fe59c26.txt |   73 ++
+   .../debug/496b2dc1-f4ff-4d22-883e-f253c9f26eb6.txt |   67 +
+   .../debug/85b63834-8d85-4f15-be61-db4940cbad34.txt |   49 +
+   .../debug/89b841a9-c36c-435d-a264-47925cca8cdb.txt |   98 ++
+   .../debug/c1fe02fa-1fdf-4491-ba8d-cb6a6a7314a8.txt |  783 ++++++++++++
+   .claude/debug/latest                               |    2 +-
+   .claude/plugins.json                               |   34 +-
+   .claude/plugins/blocklist.json                     |   17 +
+   .claude/plugins/install-counts-cache.json          |  634 ++++++++++
+   .claude/plugins/known_marketplaces.json            |    2 +-
+   .../.claude-plugin/marketplace.json                |  689 ++++++++++
+   .../.github/scripts/validate-frontmatter.ts        |  277 ++++
+   .../.github/workflows/close-external-prs.yml       |   47 +
+   .../.github/workflows/validate-frontmatter.yml     |   34 +
+   .../claude-plugins-official/.gitignore             |    2 +
+   .../marketplaces/claude-plugins-official/README.md |   51 +
+   .../asana/.claude-plugin/plugin.json               |    7 +
+   .../external_plugins/asana/.mcp.json               |    6 +
+   .../context7/.claude-plugin/plugin.json            |    7 +
+   .../external_plugins/context7/.mcp.json            |    6 +
+   .../firebase/.claude-plugin/plugin.json            |    7 +
+   .../external_plugins/firebase/.mcp.json            |    6 +
+   .../github/.claude-plugin/plugin.json              |    7 +
+   .../external_plugins/github/.mcp.json              |    9 +
+   .../gitlab/.claude-plugin/plugin.json              |    7 +
+   .../external_plugins/gitlab/.mcp.json              |    6 +
+   .../greptile/.claude-plugin/plugin.json            |   10 +
+   .../external_plugins/greptile/.mcp.json            |    9 +
+   .../external_plugins/greptile/README.md            |   57 +
+   .../laravel-boost/.claude-plugin/plugin.json       |    7 +
+   .../external_plugins/laravel-boost/.mcp.json       |    6 +
+   .../linear/.claude-plugin/plugin.json              |    7 +
+   .../external_plugins/linear/.mcp.json              |    6 +
+   .../playwright/.claude-plugin/plugin.json          |    7 +
+   .../external_plugins/playwright/.mcp.json          |    6 +
+   .../serena/.claude-plugin/plugin.json              |    7 +
+   .../external_plugins/serena/.mcp.json              |    6 +
+   .../slack/.claude-plugin/plugin.json               |    7 +
+   .../external_plugins/slack/.mcp.json               |   10 +
+   .../stripe/.claude-plugin/plugin.json              |   13 +
+   .../external_plugins/stripe/.mcp.json              |    8 +
+   .../stripe/commands/explain-error.md               |   21 +
+   .../external_plugins/stripe/commands/test-cards.md |   24 +
+   .../stripe/skills/stripe-best-practices/SKILL.md   |   30 +
+   .../supabase/.claude-plugin/plugin.json            |    7 +
+   .../external_plugins/supabase/.mcp.json            |    6 +
+   .../agent-sdk-dev/.claude-plugin/plugin.json       |    8 +
+   .../plugins/agent-sdk-dev/LICENSE                  |  202 +++
+   .../plugins/agent-sdk-dev/README.md                |  208 +++
+   .../agent-sdk-dev/agents/agent-sdk-verifier-py.md  |  140 +++
+   .../agent-sdk-dev/agents/agent-sdk-verifier-ts.md  |  145 +++
+   .../plugins/agent-sdk-dev/commands/new-sdk-app.md  |  176 +++
+   .../plugins/clangd-lsp/LICENSE                     |  202 +++
+   .../plugins/clangd-lsp/README.md                   |   36 +
+   .../claude-code-setup/.claude-plugin/plugin.json   |    9 +
+   .../plugins/claude-code-setup/LICENSE              |  202 +++
+   .../plugins/claude-code-setup/README.md            |   29 +
+   .../automation-recommender-example.png             |  Bin 0 -> 545204 bytes
+   .../skills/claude-automation-recommender/SKILL.md  |  288 +++++
+   .../references/hooks-patterns.md                   |  226 ++++
+   .../references/mcp-servers.md                      |  263 ++++
+   .../references/plugins-reference.md                |   98 ++
+   .../references/skills-reference.md                 |  408 ++++++
+   .../references/subagent-templates.md               |  181 +++
+   .../.claude-plugin/plugin.json                     |    9 +
+   .../plugins/claude-md-management/LICENSE           |  202 +++
+   .../plugins/claude-md-management/README.md         |   40 +
+   .../claude-md-improver-example.png                 |  Bin 0 -> 518778 bytes
+   .../commands/revise-claude-md.md                   |   54 +
+   .../revise-claude-md-example.png                   |  Bin 0 -> 555521 bytes
+   .../skills/claude-md-improver/SKILL.md             |  179 +++
+   .../references/quality-criteria.md                 |  109 ++
+   .../claude-md-improver/references/templates.md     |  253 ++++
+   .../references/update-guidelines.md                |  150 +++
+   .../plugins/code-review/.claude-plugin/plugin.json |    9 +
+   .../plugins/code-review/LICENSE                    |  202 +++
+   .../plugins/code-review/README.md                  |  246 ++++
+   .../plugins/code-review/commands/code-review.md    |   92 ++
+   .../code-simplifier/.claude-plugin/plugin.json     |    9 +
+   .../plugins/code-simplifier/LICENSE                |  202 +++
+   .../code-simplifier/agents/code-simplifier.md      |   52 +
+   .../commit-commands/.claude-plugin/plugin.json     |    9 +
+   .../plugins/commit-commands/LICENSE                |  202 +++
+   .../plugins/commit-commands/README.md              |  225 ++++
+   .../plugins/commit-commands/commands/clean_gone.md |   53 +
+   .../commit-commands/commands/commit-push-pr.md     |   20 +
+   .../plugins/commit-commands/commands/commit.md     |   17 +
+   .../plugins/csharp-lsp/LICENSE                     |  202 +++
+   .../plugins/csharp-lsp/README.md                   |   25 +
+   .../example-plugin/.claude-plugin/plugin.json      |    8 +
+   .../plugins/example-plugin/.mcp.json               |    6 +
+   .../plugins/example-plugin/LICENSE                 |  202 +++
+   .../plugins/example-plugin/README.md               |   62 +
+   .../example-plugin/commands/example-command.md     |   37 +
+   .../example-plugin/skills/example-skill/SKILL.md   |   84 ++
+   .../.claude-plugin/plugin.json                     |    8 +
+   .../plugins/explanatory-output-style/LICENSE       |  202 +++
+   .../plugins/explanatory-output-style/README.md     |   72 ++
+   .../hooks-handlers/session-start.sh                |   15 +
+   .../explanatory-output-style/hooks/hooks.json      |   15 +
+   .../plugins/feature-dev/.claude-plugin/plugin.json |    8 +
+   .../plugins/feature-dev/LICENSE                    |  202 +++
+   .../plugins/feature-dev/README.md                  |  412 ++++++
+   .../plugins/feature-dev/agents/code-architect.md   |   34 +
+   .../plugins/feature-dev/agents/code-explorer.md    |   51 +
+   .../plugins/feature-dev/agents/code-reviewer.md    |   46 +
+   .../plugins/feature-dev/commands/feature-dev.md    |  125 ++
+   .../frontend-design/.claude-plugin/plugin.json     |    8 +
+   .../plugins/frontend-design/LICENSE                |  202 +++
+   .../plugins/frontend-design/README.md              |   31 +
+   .../skills/frontend-design/SKILL.md                |   42 +
+   .../plugins/gopls-lsp/LICENSE                      |  202 +++
+   .../plugins/gopls-lsp/README.md                    |   20 +
+   .../plugins/hookify/.claude-plugin/plugin.json     |    8 +
+   .../plugins/hookify/.gitignore                     |   30 +
+   .../plugins/hookify/LICENSE                        |  202 +++
+   .../plugins/hookify/README.md                      |  340 +++++
+   .../hookify/agents/conversation-analyzer.md        |  176 +++
+   .../plugins/hookify/commands/configure.md          |  128 ++
+   .../plugins/hookify/commands/help.md               |  175 +++
+   .../plugins/hookify/commands/hookify.md            |  231 ++++
+   .../plugins/hookify/commands/list.md               |   82 ++
+   .../plugins/hookify/core/__init__.py               |    0
+   .../plugins/hookify/core/config_loader.py          |  297 +++++
+   .../plugins/hookify/core/rule_engine.py            |  313 +++++
+   .../hookify/examples/console-log-warning.local.md  |   14 +
+   .../plugins/hookify/examples/dangerous-rm.local.md |   14 +
+   .../hookify/examples/require-tests-stop.local.md   |   22 +
+   .../examples/sensitive-files-warning.local.md      |   18 +
+   .../plugins/hookify/hooks/__init__.py              |    0
+   .../plugins/hookify/hooks/hooks.json               |   49 +
+   .../plugins/hookify/hooks/posttooluse.py           |   62 +
+   .../plugins/hookify/hooks/pretooluse.py            |   66 +
+   .../plugins/hookify/hooks/stop.py                  |   55 +
+   .../plugins/hookify/hooks/userpromptsubmit.py      |   54 +
+   .../plugins/hookify/matchers/__init__.py           |    0
+   .../plugins/hookify/skills/writing-rules/SKILL.md  |  374 ++++++
+   .../plugins/hookify/utils/__init__.py              |    0
+   .../plugins/jdtls-lsp/LICENSE                      |  202 +++
+   .../plugins/jdtls-lsp/README.md                    |   33 +
+   .../plugins/kotlin-lsp/LICENSE                     |  202 +++
+   .../plugins/kotlin-lsp/README.md                   |   16 +
+   .../.claude-plugin/plugin.json                     |    8 +
+   .../plugins/learning-output-style/LICENSE          |  202 +++
+   .../plugins/learning-output-style/README.md        |   93 ++
+   .../hooks-handlers/session-start.sh                |   15 +
+   .../plugins/learning-output-style/hooks/hooks.json |   15 +
+   .../plugins/lua-lsp/LICENSE                        |  202 +++
+   .../plugins/lua-lsp/README.md                      |   32 +
+   .../plugins/php-lsp/LICENSE                        |  202 +++
+   .../plugins/php-lsp/README.md                      |   24 +
+   .../plugins/playground/.claude-plugin/plugin.json  |    8 +
+   .../plugins/playground/LICENSE                     |  202 +++
+   .../plugins/playground/README.md                   |   28 +
+   .../plugins/playground/skills/playground/SKILL.md  |   76 ++
+   .../skills/playground/templates/code-map.md        |  158 +++
+   .../skills/playground/templates/concept-map.md     |   73 ++
+   .../skills/playground/templates/data-explorer.md   |   67 +
+   .../playground/templates/design-playground.md      |   67 +
+   .../skills/playground/templates/diff-review.md     |  179 +++
+   .../playground/templates/document-critique.md      |  171 +++
+   .../plugins/plugin-dev/LICENSE                     |  202 +++
+   .../plugins/plugin-dev/README.md                   |  402 ++++++
+   .../plugins/plugin-dev/agents/agent-creator.md     |  176 +++
+   .../plugins/plugin-dev/agents/plugin-validator.md  |  184 +++
+   .../plugins/plugin-dev/agents/skill-reviewer.md    |  184 +++
+   .../plugins/plugin-dev/commands/create-plugin.md   |  415 ++++++
+   .../plugin-dev/skills/agent-development/SKILL.md   |  415 ++++++
+   .../examples/agent-creation-prompt.md              |  238 ++++
+   .../examples/complete-agent-examples.md            |  427 +++++++
+   .../references/agent-creation-system-prompt.md     |  207 +++
+   .../references/system-prompt-design.md             |  411 ++++++
+   .../references/triggering-examples.md              |  491 ++++++++
+   .../agent-development/scripts/validate-agent.sh    |  217 ++++
+   .../skills/command-development/README.md           |  272 ++++
+   .../plugin-dev/skills/command-development/SKILL.md |  834 ++++++++++++
+   .../examples/plugin-commands.md                    |  557 ++++++++
+   .../examples/simple-commands.md                    |  504 ++++++++
+   .../references/advanced-workflows.md               |  722 +++++++++++
+   .../references/documentation-patterns.md           |  739 +++++++++++
+   .../references/frontmatter-reference.md            |  463 +++++++
+   .../references/interactive-commands.md             |  920 ++++++++++++++
+   .../references/marketplace-considerations.md       |  904 +++++++++++++
+   .../references/plugin-features-reference.md        |  609 +++++++++
+   .../references/testing-strategies.md               |  702 +++++++++++
+   .../plugin-dev/skills/hook-development/SKILL.md    |  712 +++++++++++
+   .../hook-development/examples/load-context.sh      |   55 +
+   .../hook-development/examples/validate-bash.sh     |   43 +
+   .../hook-development/examples/validate-write.sh    |   38 +
+   .../skills/hook-development/references/advanced.md |  479 +++++++
+   .../hook-development/references/migration.md       |  369 ++++++
+   .../skills/hook-development/references/patterns.md |  346 +++++
+   .../skills/hook-development/scripts/README.md      |  164 +++
+   .../skills/hook-development/scripts/hook-linter.sh |  153 +++
+   .../skills/hook-development/scripts/test-hook.sh   |  252 ++++
+   .../scripts/validate-hook-schema.sh                |  159 +++
+   .../plugin-dev/skills/mcp-integration/SKILL.md     |  554 ++++++++
+   .../mcp-integration/examples/http-server.json      |   20 +
+   .../mcp-integration/examples/sse-server.json       |   19 +
+   .../mcp-integration/examples/stdio-server.json     |   26 +
+   .../mcp-integration/references/authentication.md   |  549 ++++++++
+   .../mcp-integration/references/server-types.md     |  536 ++++++++
+   .../mcp-integration/references/tool-usage.md       |  538 ++++++++
+   .../plugin-dev/skills/plugin-settings/SKILL.md     |  544 ++++++++
+   .../examples/create-settings-command.md            |   98 ++
+   .../plugin-settings/examples/example-settings.md   |  159 +++
+   .../plugin-settings/examples/read-settings-hook.sh |   65 +
+   .../references/parsing-techniques.md               |  549 ++++++++
+   .../references/real-world-examples.md              |  395 ++++++
+   .../plugin-settings/scripts/parse-frontmatter.sh   |   59 +
+   .../plugin-settings/scripts/validate-settings.sh   |  101 ++
+   .../plugin-dev/skills/plugin-structure/README.md   |  109 ++
+   .../plugin-dev/skills/plugin-structure/SKILL.md    |  476 +++++++
+   .../plugin-structure/examples/advanced-plugin.md   |  765 +++++++++++
+   .../plugin-structure/examples/minimal-plugin.md    |   83 ++
+   .../plugin-structure/examples/standard-plugin.md   |  587 +++++++++
+   .../references/component-patterns.md               |  567 +++++++++
+   .../references/manifest-reference.md               |  552 ++++++++
+   .../plugin-dev/skills/skill-development/SKILL.md   |  637 ++++++++++
+   .../references/skill-creator-original.md           |  209 +++
+   .../pr-review-toolkit/.claude-plugin/plugin.json   |    8 +
+   .../plugins/pr-review-toolkit/LICENSE              |  202 +++
+   .../plugins/pr-review-toolkit/README.md            |  313 +++++
+   .../pr-review-toolkit/agents/code-reviewer.md      |   47 +
+   .../pr-review-toolkit/agents/code-simplifier.md    |   88 ++
+   .../pr-review-toolkit/agents/comment-analyzer.md   |   70 ++
+   .../pr-review-toolkit/agents/pr-test-analyzer.md   |   69 +
+   .../agents/silent-failure-hunter.md                |  130 ++
+   .../agents/type-design-analyzer.md                 |  110 ++
+   .../pr-review-toolkit/commands/review-pr.md        |  189 +++
+   .../plugins/pyright-lsp/LICENSE                    |  202 +++
+   .../plugins/pyright-lsp/README.md                  |   31 +
+   .../plugins/ralph-loop/.claude-plugin/plugin.json  |    8 +
+   .../plugins/ralph-loop/LICENSE                     |  202 +++
+   .../plugins/ralph-loop/README.md                   |  179 +++
+   .../plugins/ralph-loop/commands/cancel-ralph.md    |   18 +
+   .../plugins/ralph-loop/commands/help.md            |  126 ++
+   .../plugins/ralph-loop/commands/ralph-loop.md      |   18 +
+   .../plugins/ralph-loop/hooks/hooks.json            |   15 +
+   .../plugins/ralph-loop/hooks/stop-hook.sh          |  191 +++
+   .../plugins/ralph-loop/scripts/setup-ralph-loop.sh |  204 +++
+   .../plugins/rust-analyzer-lsp/LICENSE              |  202 +++
+   .../plugins/rust-analyzer-lsp/README.md            |   34 +
+   .../security-guidance/.claude-plugin/plugin.json   |    8 +
+   .../plugins/security-guidance/LICENSE              |  202 +++
+   .../plugins/security-guidance/hooks/hooks.json     |   16 +
+   .../hooks/security_reminder_hook.py                |  280 +++++
+   .../skill-creator/.claude-plugin/plugin.json       |    8 +
+   .../plugins/skill-creator/LICENSE                  |  202 +++
+   .../plugins/skill-creator/README.md                |    3 +
+   .../skill-creator/skills/skill-creator/LICENSE.txt |  202 +++
+   .../skill-creator/skills/skill-creator/SKILL.md    |  479 +++++++
+   .../skills/skill-creator/agents/analyzer.md        |  274 ++++
+   .../skills/skill-creator/agents/comparator.md      |  202 +++
+   .../skills/skill-creator/agents/grader.md          |  223 ++++
+   .../skills/skill-creator/assets/eval_review.html   |  146 +++
+   .../skill-creator/eval-viewer/generate_review.py   |  471 +++++++
+   .../skills/skill-creator/eval-viewer/viewer.html   | 1325 ++++++++++++++++++++
+   .../skills/skill-creator/references/schemas.md     |  430 +++++++
+   .../skills/skill-creator/scripts/__init__.py       |    0
+   .../skill-creator/scripts/aggregate_benchmark.py   |  401 ++++++
+   .../skill-creator/scripts/generate_report.py       |  326 +++++
+   .../skill-creator/scripts/improve_description.py   |  248 ++++
+   .../skills/skill-creator/scripts/package_skill.py  |  136 ++
+   .../skills/skill-creator/scripts/quick_validate.py |  103 ++
+   .../skills/skill-creator/scripts/run_eval.py       |  310 +++++
+   .../skills/skill-creator/scripts/run_loop.py       |  332 +++++
+   .../skills/skill-creator/scripts/utils.py          |   47 +
+   .../plugins/swift-lsp/LICENSE                      |  202 +++
+   .../plugins/swift-lsp/README.md                    |   25 +
+   .../plugins/typescript-lsp/LICENSE                 |  202 +++
+   .../plugins/typescript-lsp/README.md               |   24 +
+   .../c1fe02fa-1fdf-4491-ba8d-cb6a6a7314a8.jsonl     |  127 ++
+   .../snapshot-zsh-1772845682984-3i1d58.sh           |   15 +
+   .../{skills => skills-backup}/1password/SKILL.md   |    0
+   .../1password/references/cli-examples.md           |    0
+   .../1password/references/get-started.md            |    0
+   .../about-me-updater-matt                          |    0
+   .../{skills => skills-backup}/automating-mac-apps  |    0
+   .../bash-defensive-patterns                        |    0
+   .../bash-loop/.skillfish.json                      |    0
+   .../{skills => skills-backup}/bash-loop/SKILL.md   |    0
+   .claude/skills-backup/brainstorming/SKILL.md       |   96 ++
+   .../{skills => skills-backup}/browser-use/SKILL.md |    0
+   .claude/{skills => skills-backup}/context7         |    0
+   .../{skills => skills-backup}/crushable-wingman    |    0
+   .claude/{skills => skills-backup}/deep-research    |    0
+   .../{skills => skills-backup}/defuddle/SKILL.md    |    0
+   .../find-skills-matt/.skillfish.json               |    0
+   .../find-skills-matt/SKILL.md                      |    0
+   .../git-advanced-workflows                         |    0
+   .claude/{skills => skills-backup}/gog-cli          |    0
+   .../{skills => skills-backup}/json-canvas/SKILL.md |    0
+   .../json-canvas/references/EXAMPLES.md             |    0
+   .../obsidian-bases/SKILL.md                        |    0
+   .../references/FUNCTIONS_REFERENCE.md              |    0
+   .../obsidian-cli/SKILL.md                          |    0
+   .../obsidian-markdown/SKILL.md                     |    0
+   .../obsidian-markdown/references/CALLOUTS.md       |    0
+   .../obsidian-markdown/references/EMBEDS.md         |    0
+   .../obsidian-markdown/references/PROPERTIES.md     |    0
+   .claude/{skills => skills-backup}/op-cli           |    0
+   .../{skills => skills-backup}/para-second-brain    |    0
+   .../personal-todos/SKILL.md                        |    0
+   .../playwright-cli/SKILL.md                        |    0
+   .claude/{skills => skills-backup}/research         |    0
+   .../skills-backup/research-tracker-matt/SKILL.md   |  208 +++
+   .claude/{skills => skills-backup}/self-improvement |    0
+   .claude/skills-backup/skill-porter/SKILL.md        |  104 ++
+   .claude/skills-backup/skills-discovery/SKILL.md    |  201 +++
+   .../web-artifacts-builder                          |    0
+   agent/models.json                                  |    2 +-
+   files/.openclaw/openclaw.json                      |   19 +-
+   files/Claude/claude_desktop_config.json            |    3 +-
+   files/Claude/config.json                           |    6 +-
+   files/Claude/window-state.json                     |    2 +-
+   files/cron/jobs.json                               |   34 +-
+   skills/context7/SKILL.md                           |    9 +-
+   skills/deep-research/SKILL.md                      |   12 +
+   skills/fixclaw/SKILL.md                            |  368 ++++++
+   skills/fixclaw/SKILL.md.bak                        |  237 ++++
+   skills/para-second-brain/SKILL.md                  |    7 +
+   skills/research-orchestrator/SKILL.md              |  233 ++++
+   skills/research/SKILL.md                           |   89 --
+   skills/research/scripts/research.sh                |  182 ---
+   skills/skill-porter/SKILL.md                       |  143 +--
+   330 files changed, 49172 insertions(+), 388 deletions(-)
+
