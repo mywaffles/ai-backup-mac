@@ -1,0 +1,783 @@
+2026-03-07T01:05:14.318Z [DEBUG] detectFileEncoding failed for expected reason: ENOENT
+2026-03-07T01:05:14.319Z [DEBUG] MDM settings load completed in 12ms
+2026-03-07T01:05:14.358Z [DEBUG] [init] configureGlobalMTLS starting
+2026-03-07T01:05:14.358Z [DEBUG] [init] configureGlobalMTLS complete
+2026-03-07T01:05:14.358Z [DEBUG] [init] configureGlobalAgents starting
+2026-03-07T01:05:14.358Z [DEBUG] [init] configureGlobalAgents complete
+2026-03-07T01:05:14.368Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514368
+2026-03-07T01:05:14.368Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.368Z [DEBUG] Temp file written successfully, size: 585 bytes
+2026-03-07T01:05:14.368Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.368Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514368 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.368Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.369Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-03-07T01:05:14.369Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=false, result=false
+2026-03-07T01:05:14.369Z [DEBUG] [STARTUP] Running setup()...
+2026-03-07T01:05:14.370Z [DEBUG] Git remote URL: null
+2026-03-07T01:05:14.370Z [DEBUG] No git remote URL found
+2026-03-07T01:05:14.370Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/mattabar/.claude/skills, project=[]
+2026-03-07T01:05:14.370Z [DEBUG] Error log sink initialized
+2026-03-07T01:05:14.373Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-03-07T01:05:14.373Z [DEBUG] [STARTUP] setup() completed in 4ms
+2026-03-07T01:05:14.373Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-03-07T01:05:14.380Z [DEBUG] Loaded inline plugin from path: anthropic-skills
+2026-03-07T01:05:14.380Z [DEBUG] Loaded 1 session-only plugins from --plugin-dir
+2026-03-07T01:05:14.380Z [DEBUG] Found 1 plugins (1 enabled, 0 disabled)
+2026-03-07T01:05:14.380Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-03-07T01:05:14.380Z [DEBUG] Checking plugin anthropic-skills: skillsPath=exists, skillsPaths=0 paths
+2026-03-07T01:05:14.380Z [DEBUG] Attempting to load skills from plugin anthropic-skills default skillsPath: /Users/mattabar/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/62dbcff6-ee02-4aba-9e73-aae776994212/bb4ddc1c-9049-44af-a88b-7ddda27785ba/skills
+2026-03-07T01:05:14.380Z [DEBUG] Total plugin commands loaded: 0
+2026-03-07T01:05:14.380Z [DEBUG] Registered 0 hooks from 1 plugins
+2026-03-07T01:05:14.380Z [DEBUG] Total plugin agents loaded: 0
+2026-03-07T01:05:14.380Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-03-07T01:05:14.380Z [DEBUG] [claudeai-mcp] Gate returned: false
+2026-03-07T01:05:14.380Z [DEBUG] [claudeai-mcp] Disabled via gate
+2026-03-07T01:05:14.381Z [DEBUG] Loaded 27 skills from plugin anthropic-skills default directory
+2026-03-07T01:05:14.381Z [DEBUG] Total plugin skills loaded: 27
+2026-03-07T01:05:14.387Z [DEBUG] Loaded 28 unique skills (28 unconditional, 0 conditional, managed: 0, user: 28, project: 0, additional: 0, legacy commands: 0)
+2026-03-07T01:05:14.387Z [DEBUG] getSkills returning: 28 skill dir commands, 27 plugin skills, 5 bundled skills
+2026-03-07T01:05:14.388Z [DEBUG] [STARTUP] Commands and agents loaded in 15ms
+2026-03-07T01:05:14.388Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-03-07T01:05:14.388Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-03-07T01:05:14.388Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-03-07T01:05:14.390Z [DEBUG] [STARTUP] MCP configs loaded in 21ms
+2026-03-07T01:05:14.393Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-03-07T01:05:14.393Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.419Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-03-07T01:05:14.419Z [DEBUG] [3P telemetry] isTelemetryEnabled=false (CLAUDE_CODE_ENABLE_TELEMETRY=undefined)
+2026-03-07T01:05:14.420Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-03-07T01:05:14.422Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-03-07T01:05:14.422Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:05:14.422Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-03-07T01:05:14.430Z [DEBUG] installPluginsForHeadless: starting
+2026-03-07T01:05:14.430Z [DEBUG] Found 0 installed plugins
+2026-03-07T01:05:14.430Z [DEBUG] installPluginsForHeadless: no missing plugins or marketplaces configured
+2026-03-07T01:05:14.431Z [DEBUG] Total LSP servers loaded: 0
+2026-03-07T01:05:14.431Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-03-07T01:05:14.431Z [DEBUG] LSP manager initialized with 0 servers
+2026-03-07T01:05:14.431Z [DEBUG] LSP server manager initialized successfully
+2026-03-07T01:05:14.431Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-03-07T01:05:14.434Z [DEBUG] Total plugin output styles loaded: 0
+2026-03-07T01:05:14.434Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.435Z [DEBUG] Fetching plugin security messages from https://raw.githubusercontent.com/anthropics/claude-plugins-official/refs/heads/security/security.json
+2026-03-07T01:05:14.451Z [DEBUG] Watching for changes in skill/command directories: /Users/mattabar/.claude/skills...
+2026-03-07T01:05:14.479Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:05:14.479Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:05:14.479Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:05:14.479Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:05:14.479Z [DEBUG] Sending 56 skills via attachment (initial, 56 total sent)
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:playwright-cli" (userFacingName="playwright-cli")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-milk1" (userFacingName="deleteme-milk1")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:op-cli" (userFacingName="op-cli")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:para-second-brain" (userFacingName="para-second-brain")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:schedule" (userFacingName="schedule")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:automating-mac-apps" (userFacingName="automating-mac-apps")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:context7" (userFacingName="context7")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:ai-backup-mac" (userFacingName="ai-backup-mac")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:fixclaw" (userFacingName="fixclaw")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:docx" (userFacingName="docx")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:joke-jerry-seinfeld" (userFacingName="joke-jerry-seinfeld")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:talking-parents-matt" (userFacingName="talking-parents-matt")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:kepano-obsidian-skills" (userFacingName="kepano-obsidian-skills")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:xlsx" (userFacingName="xlsx")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:gog-cli" (userFacingName="gog-cli")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:git-advanced-workflows" (userFacingName="git-advanced-workflows")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:skill-creator" (userFacingName="skill-creator")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:pptx" (userFacingName="pptx")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:personal-todos" (userFacingName="personal-todos")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:deep-research" (userFacingName="deep-research")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-cowork" (userFacingName="deleteme-cowork")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-code" (userFacingName="deleteme-code")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:find-skills" (userFacingName="find-skills")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:research-tracker-matt" (userFacingName="research-tracker-matt")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:pdf" (userFacingName="pdf")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:about-me-updater" (userFacingName="about-me-updater")
+2026-03-07T01:05:14.479Z [DEBUG] Skill prompt: showing "anthropic-skills:dnd" (userFacingName="dnd")
+2026-03-07T01:05:14.480Z [WARN] [3P telemetry] Event dropped (no event logger initialized): user_prompt
+2026-03-07T01:05:14.480Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:05:14.480Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:05:14.480Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:05:14.480Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.483Z [DEBUG] autocompact: tokens=3775 threshold=167000 effectiveWindow=180000
+2026-03-07T01:05:14.483Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:05:14.494Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.63.a43; cc_entrypoint=claude-desktop; cch=00000;
+2026-03-07T01:05:14.494Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.494Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:05:14.494Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:05:14.494Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.494Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:05:14.494Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:14.508Z [DEBUG] Security messages saved successfully
+2026-03-07T01:05:14.514Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514514
+2026-03-07T01:05:14.514Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.514Z [DEBUG] Temp file written successfully, size: 660 bytes
+2026-03-07T01:05:14.514Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.514Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514514 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.514Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.514Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514514
+2026-03-07T01:05:14.514Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.514Z [DEBUG] Temp file written successfully, size: 699 bytes
+2026-03-07T01:05:14.514Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.514Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514514 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.514Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.515Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514515
+2026-03-07T01:05:14.515Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.515Z [DEBUG] Temp file written successfully, size: 737 bytes
+2026-03-07T01:05:14.515Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.515Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514515 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.515Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.515Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514515
+2026-03-07T01:05:14.515Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.515Z [DEBUG] Temp file written successfully, size: 769 bytes
+2026-03-07T01:05:14.515Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.515Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514515 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.515Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.515Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514515
+2026-03-07T01:05:14.515Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.516Z [DEBUG] Temp file written successfully, size: 799 bytes
+2026-03-07T01:05:14.516Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.516Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514515 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.516Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.516Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514516
+2026-03-07T01:05:14.516Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.516Z [DEBUG] Temp file written successfully, size: 832 bytes
+2026-03-07T01:05:14.516Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.516Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514516 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.516Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.516Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514516
+2026-03-07T01:05:14.516Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.516Z [DEBUG] Temp file written successfully, size: 875 bytes
+2026-03-07T01:05:14.516Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.516Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514516 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.516Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.517Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514517
+2026-03-07T01:05:14.517Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.517Z [DEBUG] Temp file written successfully, size: 927 bytes
+2026-03-07T01:05:14.517Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.517Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514517 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.517Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.517Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514517
+2026-03-07T01:05:14.517Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.517Z [DEBUG] Temp file written successfully, size: 959 bytes
+2026-03-07T01:05:14.517Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.517Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514517 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.517Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.517Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514517
+2026-03-07T01:05:14.517Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.518Z [DEBUG] Temp file written successfully, size: 992 bytes
+2026-03-07T01:05:14.518Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.518Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514517 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.518Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.518Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514518
+2026-03-07T01:05:14.518Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.518Z [DEBUG] Temp file written successfully, size: 1022 bytes
+2026-03-07T01:05:14.518Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.518Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514518 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.518Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.518Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514518
+2026-03-07T01:05:14.518Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.518Z [DEBUG] Temp file written successfully, size: 1059 bytes
+2026-03-07T01:05:14.518Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.518Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514518 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.518Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.519Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514519
+2026-03-07T01:05:14.519Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.519Z [DEBUG] Temp file written successfully, size: 1096 bytes
+2026-03-07T01:05:14.519Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.519Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514519 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.519Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.519Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514519
+2026-03-07T01:05:14.519Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.519Z [DEBUG] Temp file written successfully, size: 1128 bytes
+2026-03-07T01:05:14.519Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.519Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514519 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.519Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.519Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514519
+2026-03-07T01:05:14.519Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.519Z [DEBUG] Temp file written successfully, size: 1172 bytes
+2026-03-07T01:05:14.519Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.519Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514519 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.519Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.520Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514520
+2026-03-07T01:05:14.520Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.523Z [DEBUG] Temp file written successfully, size: 1210 bytes
+2026-03-07T01:05:14.523Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.523Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514520 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.523Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.523Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514523
+2026-03-07T01:05:14.523Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.523Z [DEBUG] Temp file written successfully, size: 1246 bytes
+2026-03-07T01:05:14.523Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.523Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514523 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.523Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.524Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514524
+2026-03-07T01:05:14.524Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.524Z [DEBUG] Temp file written successfully, size: 1279 bytes
+2026-03-07T01:05:14.524Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.524Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514524 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.524Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.527Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514527
+2026-03-07T01:05:14.527Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.528Z [DEBUG] Temp file written successfully, size: 1310 bytes
+2026-03-07T01:05:14.528Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.528Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514527 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.528Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.528Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514528
+2026-03-07T01:05:14.528Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.528Z [DEBUG] Temp file written successfully, size: 1353 bytes
+2026-03-07T01:05:14.528Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.528Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514528 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.528Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.528Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514528
+2026-03-07T01:05:14.528Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.528Z [DEBUG] Temp file written successfully, size: 1390 bytes
+2026-03-07T01:05:14.528Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.528Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514528 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.528Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.528Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514528
+2026-03-07T01:05:14.528Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.529Z [DEBUG] Temp file written successfully, size: 1428 bytes
+2026-03-07T01:05:14.529Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.529Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514528 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.529Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.529Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514529
+2026-03-07T01:05:14.529Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.529Z [DEBUG] Temp file written successfully, size: 1475 bytes
+2026-03-07T01:05:14.529Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.529Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514529 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.529Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.529Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514529
+2026-03-07T01:05:14.529Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.529Z [DEBUG] Temp file written successfully, size: 1513 bytes
+2026-03-07T01:05:14.529Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.529Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514529 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.530Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.530Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514530
+2026-03-07T01:05:14.530Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.530Z [DEBUG] Temp file written successfully, size: 1558 bytes
+2026-03-07T01:05:14.530Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.530Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514530 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.530Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.530Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514530
+2026-03-07T01:05:14.530Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.530Z [DEBUG] Temp file written successfully, size: 1589 bytes
+2026-03-07T01:05:14.530Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.530Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514530 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.531Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.531Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514531
+2026-03-07T01:05:14.531Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.531Z [DEBUG] Temp file written successfully, size: 1656 bytes
+2026-03-07T01:05:14.531Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.531Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514531 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.531Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.531Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514531
+2026-03-07T01:05:14.531Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.533Z [DEBUG] Temp file written successfully, size: 1681 bytes
+2026-03-07T01:05:14.533Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.533Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514531 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.533Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.534Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514534
+2026-03-07T01:05:14.534Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.534Z [DEBUG] Temp file written successfully, size: 1727 bytes
+2026-03-07T01:05:14.534Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.534Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514534 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.534Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.534Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514534
+2026-03-07T01:05:14.534Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.534Z [DEBUG] Temp file written successfully, size: 1766 bytes
+2026-03-07T01:05:14.534Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.534Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514534 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.534Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.534Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845514534
+2026-03-07T01:05:14.534Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:14.535Z [DEBUG] Temp file written successfully, size: 1904 bytes
+2026-03-07T01:05:14.535Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:14.535Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845514534 to /Users/mattabar/.claude.json
+2026-03-07T01:05:14.535Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:14.536Z [ERROR] "AxiosError: [url=https://api.anthropic.com/api/oauth/profile,status=403,body=OAuth token does not meet scope requirement any_of(user:profile, user:office)] Error\n    at YM (/$bunfs/root/claude:92:1144)\n    at <anonymous> (/$bunfs/root/claude:93:10067)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:861:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:95:2149)\n    at processTicksAndRejections (native:7:39)"
+2026-03-07T01:05:14.567Z [ERROR] Failed to fetch org fast mode status, defaulting to disabled: AxiosError: Request failed with status code 403
+2026-03-07T01:05:14.930Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/mattabar/Library/Application Support/Claude/claude-code/2.1.63/claude)
+2026-03-07T01:05:17.775Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:05:18.414Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845518414
+2026-03-07T01:05:18.414Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:18.415Z [DEBUG] Temp file written successfully, size: 1946 bytes
+2026-03-07T01:05:18.415Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:18.415Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845518414 to /Users/mattabar/.claude.json
+2026-03-07T01:05:18.415Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:18.419Z [DEBUG] executePreToolHooks called for tool: Skill
+2026-03-07T01:05:18.419Z [DEBUG] Getting matching hook commands for PreToolUse with query: Skill
+2026-03-07T01:05:18.419Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:05:18.419Z [DEBUG] Matched 0 unique hooks for query "Skill" (0 before deduplication)
+2026-03-07T01:05:18.421Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845518421
+2026-03-07T01:05:18.421Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:18.421Z [DEBUG] Temp file written successfully, size: 2061 bytes
+2026-03-07T01:05:18.421Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:18.421Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845518421 to /Users/mattabar/.claude.json
+2026-03-07T01:05:18.422Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:18.423Z [DEBUG] Metadata string for joke-jerry-seinfeld:
+2026-03-07T01:05:18.423Z [DEBUG] "  <command-message>anthropic-skills:joke-jerry-seinfeld</command-message>\n<command-name>/anthropic-skills:joke-jerry-seinfeld</command-name>\n<command-args>Give me three jokes in Jerry Seinfeld's style</"
+2026-03-07T01:05:18.423Z [DEBUG] command-message tags in metadata: 1
+2026-03-07T01:05:18.424Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:05:18.424Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:05:18.424Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:05:18.424Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:05:18.424Z [DEBUG] processPromptSlashCommand creating 3 messages for joke-jerry-seinfeld
+2026-03-07T01:05:18.424Z [DEBUG] "  Message 1: <command-message>anthropic-skills:joke-jerry-seinfeld</command-message>\n<command-name>/anthropic-skills:joke-jerry-seinfeld</command-name>\n<command-args>Give me three jokes in Jerry Seinfeld's style</"
+2026-03-07T01:05:18.424Z [DEBUG] Message 2 [META]: [{"type":"text","text":"Base directory for this skill: /Users/mattabar/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/62dbcff6-ee02-4aba-9e73-aae776994212/bb4ddc1c-9049-44a
+2026-03-07T01:05:18.424Z [DEBUG] Message 3: [ATTACHMENT]
+2026-03-07T01:05:18.424Z [DEBUG] SkillTool returning 2 newMessages for skill joke-jerry-seinfeld
+2026-03-07T01:05:18.424Z [DEBUG] newMessage 1: [{"type":"text","text":"Base directory for this skill: /Users/mattabar/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/62db...
+2026-03-07T01:05:18.425Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845518425
+2026-03-07T01:05:18.425Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:18.425Z [DEBUG] Temp file written successfully, size: 2161 bytes
+2026-03-07T01:05:18.425Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:18.425Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845518425 to /Users/mattabar/.claude.json
+2026-03-07T01:05:18.426Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:18.426Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845518426
+2026-03-07T01:05:18.426Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:05:18.427Z [DEBUG] Temp file written successfully, size: 2195 bytes
+2026-03-07T01:05:18.427Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:05:18.427Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845518426 to /Users/mattabar/.claude.json
+2026-03-07T01:05:18.427Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:05:18.427Z [DEBUG] Getting matching hook commands for PostToolUse with query: Skill
+2026-03-07T01:05:18.427Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:05:18.427Z [DEBUG] Matched 1 unique hooks for query "Skill" (1 before deduplication)
+2026-03-07T01:05:18.435Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:05:18.435Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:05:18.435Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:05:18.435Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:05:18.435Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:05:18.435Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.435Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:05:18.435Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:05:18.435Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.435Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:05:18.435Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.436Z [DEBUG] autocompact: tokens=50271 threshold=167000 effectiveWindow=180000
+2026-03-07T01:05:18.436Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:05:18.438Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.438Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:05:18.438Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:05:18.438Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.438Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:05:18.438Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:18.938Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:05:20.400Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:05:24.898Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:05:24.898Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:05:24.898Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:05:24.899Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:40.437Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:05:40.437Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:05:40.437Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:05:40.437Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:05:40.437Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:05:40.437Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:05:40.437Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:05:40.437Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:40.439Z [DEBUG] autocompact: tokens=50577 threshold=167000 effectiveWindow=180000
+2026-03-07T01:05:40.439Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:05:40.441Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:40.441Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:05:40.441Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:05:40.441Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:40.441Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:05:40.441Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:05:42.785Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:05:49.437Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:05:49.437Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:05:49.437Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:05:49.438Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:06:06.513Z [DEBUG] Detected skill change: /Users/mattabar/.claude/skills/.DS_Store
+2026-03-07T01:06:06.815Z [DEBUG] Getting matching hook commands for ConfigChange with query: skills
+2026-03-07T01:06:06.815Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:06:06.815Z [DEBUG] Matched 0 unique hooks for query "skills" (0 before deduplication)
+2026-03-07T01:06:06.815Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/mattabar/.claude/skills, project=[]
+2026-03-07T01:06:06.815Z [DEBUG] getPluginSkills: Processing 1 enabled plugins
+2026-03-07T01:06:06.815Z [DEBUG] Checking plugin anthropic-skills: skillsPath=exists, skillsPaths=0 paths
+2026-03-07T01:06:06.815Z [DEBUG] Attempting to load skills from plugin anthropic-skills default skillsPath: /Users/mattabar/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/62dbcff6-ee02-4aba-9e73-aae776994212/bb4ddc1c-9049-44af-a88b-7ddda27785ba/skills
+2026-03-07T01:06:06.815Z [DEBUG] Total plugin commands loaded: 0
+2026-03-07T01:06:06.817Z [DEBUG] Loaded 27 skills from plugin anthropic-skills default directory
+2026-03-07T01:06:06.817Z [DEBUG] Total plugin skills loaded: 27
+2026-03-07T01:06:06.822Z [DEBUG] Loaded 28 unique skills (28 unconditional, 0 conditional, managed: 0, user: 28, project: 0, additional: 0, legacy commands: 0)
+2026-03-07T01:06:06.822Z [DEBUG] getSkills returning: 28 skill dir commands, 27 plugin skills, 5 bundled skills
+2026-03-07T01:07:36.327Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:07:36.327Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:07:36.327Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:07:36.327Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:07:36.327Z [DEBUG] Sending 57 skills via attachment (initial, 57 total sent)
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:playwright-cli" (userFacingName="playwright-cli")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-milk1" (userFacingName="deleteme-milk1")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:find-skills" (userFacingName="find-skills")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:ai-backup-mac" (userFacingName="ai-backup-mac")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:fixclaw" (userFacingName="fixclaw")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:research-tracker-matt" (userFacingName="research-tracker-matt")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:pptx" (userFacingName="pptx")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:kepano-obsidian-skills" (userFacingName="kepano-obsidian-skills")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:dnd" (userFacingName="dnd")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:about-me-updater" (userFacingName="about-me-updater")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:talking-parents-matt" (userFacingName="talking-parents-matt")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:skill-creator" (userFacingName="skill-creator")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:personal-todos" (userFacingName="personal-todos")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:pdf" (userFacingName="pdf")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:op-cli" (userFacingName="op-cli")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:para-second-brain" (userFacingName="para-second-brain")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:xlsx" (userFacingName="xlsx")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:git-advanced-workflows" (userFacingName="git-advanced-workflows")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:deep-research" (userFacingName="deep-research")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:context7" (userFacingName="context7")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:gog-cli" (userFacingName="gog-cli")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:automating-mac-apps" (userFacingName="automating-mac-apps")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-code" (userFacingName="deleteme-code")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:joke-jerry-seinfeld" (userFacingName="joke-jerry-seinfeld")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:deleteme-cowork" (userFacingName="deleteme-cowork")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:schedule" (userFacingName="schedule")
+2026-03-07T01:07:36.327Z [DEBUG] Skill prompt: showing "anthropic-skills:docx" (userFacingName="docx")
+2026-03-07T01:07:36.328Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:07:36.328Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:36.328Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:07:36.328Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:36.330Z [DEBUG] autocompact: tokens=54998 threshold=167000 effectiveWindow=180000
+2026-03-07T01:07:36.330Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:07:36.333Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:36.333Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:07:36.333Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:07:36.334Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:36.334Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:07:36.334Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:39.040Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:07:40.802Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772845660802
+2026-03-07T01:07:40.802Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:07:40.802Z [DEBUG] Temp file written successfully, size: 2235 bytes
+2026-03-07T01:07:40.802Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:07:40.802Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772845660802 to /Users/mattabar/.claude.json
+2026-03-07T01:07:40.802Z [DEBUG] File /Users/mattabar/.claude.json written atomically
+2026-03-07T01:07:40.803Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-03-07T01:07:40.803Z [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+2026-03-07T01:07:40.803Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:40.803Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2026-03-07T01:07:40.806Z [DEBUG] "Permission suggestions for Glob: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//Users/mattabar/.agents/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"session\"\n  }\n]"
+2026-03-07T01:07:40.806Z [DEBUG] executePermissionRequestHooks called for tool: Glob
+2026-03-07T01:07:40.806Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Glob
+2026-03-07T01:07:40.806Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:40.806Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2026-03-07T01:07:41.117Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-03-07T01:07:41.117Z [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+2026-03-07T01:07:41.117Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:41.117Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2026-03-07T01:07:41.118Z [DEBUG] "Permission suggestions for Glob: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//Users/mattabar/.claude/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"session\"\n  }\n]"
+2026-03-07T01:07:41.118Z [DEBUG] executePermissionRequestHooks called for tool: Glob
+2026-03-07T01:07:41.118Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Glob
+2026-03-07T01:07:41.118Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:41.118Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2026-03-07T01:07:52.346Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'session': ["Read(//Users/mattabar/.agents/**)"]
+2026-03-07T01:07:52.725Z [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+2026-03-07T01:07:52.725Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:07:52.725Z [DEBUG] Matched 2 unique hooks for query "Glob" (2 before deduplication)
+2026-03-07T01:07:53.359Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'session': ["Read(//Users/mattabar/.claude/**)"]
+2026-03-07T01:07:53.606Z [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+2026-03-07T01:07:53.606Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:07:53.606Z [DEBUG] Matched 2 unique hooks for query "Glob" (2 before deduplication)
+2026-03-07T01:07:53.607Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:07:53.607Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:07:53.607Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:07:53.607Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:07:53.607Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:07:53.607Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:53.607Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:07:53.607Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:07:53.607Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:53.607Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:07:53.607Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:53.607Z [DEBUG] autocompact: tokens=55078 threshold=167000 effectiveWindow=180000
+2026-03-07T01:07:53.608Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:07:53.609Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:53.609Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:07:53.609Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:07:53.609Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:53.609Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:07:53.609Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:07:54.245Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:07:56.833Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:07:56.841Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-07T01:07:56.842Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-07T01:07:56.842Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:56.842Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-07T01:07:56.861Z [DEBUG] tree-sitter: loaded from embedded
+2026-03-07T01:07:56.865Z [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//Users/mattabar/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"session\"\n  }\n]"
+2026-03-07T01:07:56.865Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2026-03-07T01:07:56.865Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2026-03-07T01:07:56.865Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:07:56.865Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-07T01:08:02.980Z [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'session': ["Read(//Users/mattabar/**)"]
+2026-03-07T01:08:02.983Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-03-07T01:08:02.983Z [DEBUG] Looking for shell config file: /Users/mattabar/.zshrc
+2026-03-07T01:08:02.984Z [DEBUG] Snapshots directory: /Users/mattabar/.claude/shell-snapshots
+2026-03-07T01:08:02.985Z [DEBUG] Creating snapshot at: /Users/mattabar/.claude/shell-snapshots/snapshot-zsh-1772845682984-3i1d58.sh
+2026-03-07T01:08:02.985Z [DEBUG] Execution timeout: 10000ms
+2026-03-07T01:08:03.022Z [DEBUG] Shell snapshot created successfully (886 bytes)
+2026-03-07T01:08:03.023Z [DEBUG] No session environment scripts found
+2026-03-07T01:08:03.023Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-07T01:08:44.036Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-07T01:08:44.036Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:08:44.036Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2026-03-07T01:08:44.038Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:08:44.038Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:08:44.038Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:08:44.038Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:08:44.038Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:08:44.039Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.039Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:08:44.039Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:08:44.039Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.039Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:08:44.039Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.040Z [DEBUG] autocompact: tokens=55341 threshold=167000 effectiveWindow=180000
+2026-03-07T01:08:44.040Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:08:44.042Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.042Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:08:44.042Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:08:44.042Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.042Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:08:44.042Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:44.584Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:08:46.902Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:08:48.960Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-07T01:08:48.961Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-07T01:08:48.961Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:08:48.961Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-07T01:08:48.971Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-07T01:08:48.992Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-07T01:08:48.992Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:08:48.993Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2026-03-07T01:08:48.995Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:08:48.995Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:08:48.995Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:08:48.995Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:08:48.995Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:08:48.995Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:48.995Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:08:48.995Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:08:48.995Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:48.995Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:08:48.995Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:48.996Z [DEBUG] autocompact: tokens=55606 threshold=167000 effectiveWindow=180000
+2026-03-07T01:08:48.996Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:08:48.997Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:48.998Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:08:48.998Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:08:48.998Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:48.998Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:08:48.998Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:08:50.868Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:08:50.930Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:08:53.389Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:08:53.389Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:08:53.389Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:08:53.390Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:36.608Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:09:36.608Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:09:36.608Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:09:36.608Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:09:36.609Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:09:36.609Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:09:36.609Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:09:36.609Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:36.610Z [DEBUG] autocompact: tokens=55767 threshold=167000 effectiveWindow=180000
+2026-03-07T01:09:36.610Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:09:36.612Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:36.612Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:36.612Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:36.612Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:36.612Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:36.612Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:39.543Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:09:41.898Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-07T01:09:41.898Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-07T01:09:41.898Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:09:41.898Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-07T01:09:41.900Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-07T01:09:41.900Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:09:41.900Z [DEBUG] Matched 2 unique hooks for query "Read" (2 before deduplication)
+2026-03-07T01:09:42.290Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-07T01:09:42.290Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-07T01:09:42.290Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:09:42.290Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-07T01:09:42.293Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-07T01:09:42.307Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-07T01:09:42.307Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:09:42.307Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2026-03-07T01:09:42.308Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:09:42.308Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:09:42.308Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:09:42.308Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:09:42.308Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:09:42.308Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.308Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:42.308Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:42.308Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.308Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:42.308Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.309Z [DEBUG] autocompact: tokens=56944 threshold=167000 effectiveWindow=180000
+2026-03-07T01:09:42.309Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:09:42.310Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.310Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:42.310Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:42.310Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.310Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:42.310Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:42.998Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:09:47.034Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:09:47.091Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-07T01:09:47.091Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-07T01:09:47.091Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:09:47.091Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-07T01:09:47.092Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:47.092Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:47.092Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:47.204Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-07T01:09:47.204Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:09:47.204Z [DEBUG] Matched 2 unique hooks for query "Read" (2 before deduplication)
+2026-03-07T01:09:47.209Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:09:47.209Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:09:47.209Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:09:47.209Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:09:47.209Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:09:47.211Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:47.211Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:47.211Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:47.211Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:47.211Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:47.211Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:47.211Z [DEBUG] autocompact: tokens=62183 threshold=167000 effectiveWindow=180000
+2026-03-07T01:09:47.212Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:09:47.213Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:47.213Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:09:47.213Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:09:47.213Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:47.213Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:09:47.213Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:09:48.018Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:09:49.163Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:10:02.110Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:10:02.110Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:10:02.110Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:10:02.111Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:45.742Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:10:45.742Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:10:45.742Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:10:45.742Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:10:45.743Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:45.743Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:45.743Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:45.886Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:10:45.886Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:10:45.886Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:10:45.887Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:45.887Z [DEBUG] autocompact: tokens=64249 threshold=167000 effectiveWindow=180000
+2026-03-07T01:10:45.888Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:10:45.890Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:45.890Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:45.890Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:45.890Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:45.890Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:45.890Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:48.945Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:10:50.401Z [DEBUG] executePreToolHooks called for tool: Glob
+2026-03-07T01:10:50.401Z [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+2026-03-07T01:10:50.401Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:10:50.401Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2026-03-07T01:10:50.606Z [DEBUG] executePreToolHooks called for tool: Bash
+2026-03-07T01:10:50.606Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2026-03-07T01:10:50.606Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:10:50.606Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2026-03-07T01:10:50.609Z [DEBUG] Spawning shell without login (-l flag skipped)
+2026-03-07T01:10:50.621Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2026-03-07T01:10:50.621Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:10:50.621Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2026-03-07T01:10:50.665Z [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+2026-03-07T01:10:50.665Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:10:50.665Z [DEBUG] Matched 2 unique hooks for query "Glob" (2 before deduplication)
+2026-03-07T01:10:50.666Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:10:50.666Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:10:50.666Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:10:50.666Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:10:50.666Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:10:50.666Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:50.666Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:50.666Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:50.666Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:50.666Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:50.666Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:50.667Z [DEBUG] autocompact: tokens=64932 threshold=167000 effectiveWindow=180000
+2026-03-07T01:10:50.667Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:10:50.668Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:50.668Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:50.668Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:50.668Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:50.668Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:50.668Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:52.800Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:10:52.944Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:10:54.095Z [DEBUG] executePreToolHooks called for tool: Read
+2026-03-07T01:10:54.095Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2026-03-07T01:10:54.095Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:10:54.095Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2026-03-07T01:10:54.098Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2026-03-07T01:10:54.098Z [DEBUG] Found 6 hook matchers in settings
+2026-03-07T01:10:54.098Z [DEBUG] Matched 2 unique hooks for query "Read" (2 before deduplication)
+2026-03-07T01:10:54.106Z [DEBUG] Tool search disabled for model 'claude-haiku-4-5-20251001': model does not support tool_reference blocks. This feature is only available on Claude Sonnet 4+, Opus 4+, and newer models.
+2026-03-07T01:10:54.106Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:10:54.106Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:10:54.106Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:10:54.106Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:10:54.106Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.106Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:54.106Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:54.107Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.107Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:54.107Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.107Z [DEBUG] autocompact: tokens=67923 threshold=167000 effectiveWindow=180000
+2026-03-07T01:10:54.107Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:10:54.109Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.109Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:10:54.109Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:10:54.109Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.109Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:10:54.109Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:54.842Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:10:58.998Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:11:12.992Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:11:12.992Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:11:12.992Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:11:12.993Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:13:07.873Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-07T01:13:07.873Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-07T01:13:07.873Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-07T01:13:07.873Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-07T01:13:07.874Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:13:07.874Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:13:07.874Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:13:08.284Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-07T01:13:08.284Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:13:08.284Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-07T01:13:08.286Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:13:08.287Z [DEBUG] autocompact: tokens=69714 threshold=167000 effectiveWindow=180000
+2026-03-07T01:13:08.288Z [DEBUG] Tool search disabled: ToolSearchTool is not available (may have been disallowed via disallowedTools).
+2026-03-07T01:13:08.292Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:13:08.292Z [DEBUG] [API:request] Creating client, ANTHROPIC_CUSTOM_HEADERS present: false, has Authorization header: false
+2026-03-07T01:13:08.292Z [DEBUG] [API:auth] OAuth token check starting
+2026-03-07T01:13:08.292Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:13:08.292Z [DEBUG] [API:auth] OAuth token check complete
+2026-03-07T01:13:08.293Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:13:11.693Z [DEBUG] Stream started - received first chunk
+2026-03-07T01:13:22.392Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-07T01:13:22.392Z [DEBUG] Found 2 hook matchers in settings
+2026-03-07T01:13:22.392Z [DEBUG] Matched 2 unique hooks for query "no match query" (2 before deduplication)
+2026-03-07T01:13:22.393Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:15:14.440Z [DEBUG] Writing to temp file: /Users/mattabar/.claude.json.tmp.41508.1772846114440
+2026-03-07T01:15:14.440Z [DEBUG] Preserving file permissions: 100600
+2026-03-07T01:15:14.441Z [DEBUG] Temp file written successfully, size: 2280 bytes
+2026-03-07T01:15:14.441Z [DEBUG] Applied original permissions to temp file
+2026-03-07T01:15:14.441Z [DEBUG] Renaming /Users/mattabar/.claude.json.tmp.41508.1772846114440 to /Users/mattabar/.claude.json
+2026-03-07T01:15:14.441Z [DEBUG] File /Users/mattabar/.claude.json written atomically

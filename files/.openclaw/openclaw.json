@@ -1,10 +1,10 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-05T06:43:13.813Z"
+    "lastTouchedAt": "2026-03-07T01:32:39.520Z"
   },
   "env": {
-    "OPENROUTER_API_KEY": "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"
+    "OPENROUTER_API_KEY": "op://AI Agents/OpenRouter - API Key - mac-mini/credential"
   },
   "agents": {
     "defaults": {
@@ -12,16 +12,16 @@
         "primary": "openrouter/anthropic/claude-sonnet-4.5",
         "fallbacks": [
           "openrouter/anthropic/claude-opus-4.6",
-          "openrouter/google/gemini-2.5-flash-preview"
+          "openrouter/google/gemini-2.5-flash"
         ]
       },
       "models": {
         "openrouter/openrouter/auto": {},
         "openrouter/anthropic/claude-sonnet-4.5": {},
-        "openrouter/google/gemini-2.5-flash-preview": {},
         "openrouter/google/gemini-3-pro": {},
         "openrouter/deepseek/deepseek-chat": {},
-        "openrouter/anthropic/claude-opus-4.6": {}
+        "openrouter/anthropic/claude-opus-4.6": {},
+        "openrouter/google/gemini-2.5-flash": {}
       },
       "workspace": "~/.openclaw/workspace",
       "memorySearch": {
@@ -47,7 +47,7 @@
         "enabled": true,
         "provider": "perplexity",
         "perplexity": {
-          "apiKey": "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",
+          "apiKey": "op://AI Agents/OpenRouter - API Key - mac-mini/credential",
           "baseUrl": "https://openrouter.ai/api/v1",
           "model": "perplexity/sonar-pro"
         }
@@ -57,7 +57,7 @@
   "messages": {
     "responsePrefix": "🦞 Model: {model} • {timestamp}\\n\\n",
     "tts": {
-      "auto": "always",
+      "auto": "off",
       "provider": "edge",
       "edge": {
         "voice": "en-US-GuyNeural"
@@ -98,7 +98,7 @@
   "talk": {
     "voiceId": "EXAVITQu4vr4xnSDxMaL",
     "modelId": "eleven_turbo_v2_5",
-    "apiKey": "sk_6d4363352af79bb977defc06af30c7725e1ceba36fcf655b",
+    "apiKey": "op://AI Agents/ElevenLabs - OpenClaw Mac Mini/credential",
     "interruptOnSpeech": true
   },
   "gateway": {
@@ -123,6 +123,9 @@
     "entries": {
       "bluebubbles": {
         "enabled": true
+      },
+      "talk-voice": {
+        "enabled": false
       }
     }
   }

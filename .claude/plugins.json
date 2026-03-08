@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": 1772432250802,
+  "lastUpdated": 1772824892862,
   "plugins": [
     {
       "filename": "automating-mac-apps",
@@ -165,6 +165,38 @@
         "contentHash": "a5460082df718aa069a5f467487c23c12a76e900a1845d39480420507e66c9e1",
         "installedAt": 1772432250802,
         "updatedAt": 1772432250802
+      }
+    },
+    {
+      "filename": "brainstorming",
+      "type": "skill",
+      "metadata": {
+        "sourcePath": "skills/brainstorming",
+        "filename": "brainstorming",
+        "name": "brainstorming",
+        "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+        "category": "skills",
+        "type": "skill",
+        "size": 4690,
+        "contentHash": "7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
+        "installedAt": 1772824886244,
+        "updatedAt": 1772824886244
+      }
+    },
+    {
+      "filename": "skills-discovery",
+      "type": "skill",
+      "metadata": {
+        "sourcePath": "skills/skills-discovery",
+        "filename": "skills-discovery",
+        "name": "skills-discovery",
+        "description": "Search for and install Agent Skills that give you specialized capabilities. Before starting work, ask might a skill exist that handles this better than my base knowledge? If the task involves specific technologies, frameworks, file formats, or expert domains. Search proactively, even if the user doesn't mention skills. Skills encode best practices, tools, and techniques you wouldn't otherwise have. Also use when users explicitly ask to find, install, or manage skills.",
+        "category": "skills",
+        "type": "skill",
+        "size": 5732,
+        "contentHash": "a5656d72b38b2567d9f1b612630e7865bf08a9a964581f67b5f4652721f8c182",
+        "installedAt": 1772824892862,
+        "updatedAt": 1772824892862
       }
     }
   ]

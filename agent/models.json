@@ -22,7 +22,7 @@
           "maxTokens": 8192
         }
       ],
-      "apiKey": "OPENROUTER_API_KEY"
+      "apiKey": "op://AI Agents/OpenRouter - API Key - mac-mini/credential"
     }
   }
 }

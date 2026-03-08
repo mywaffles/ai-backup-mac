@@ -15,7 +15,12 @@ description: |
 
 Retrieve current library documentation via Context7 API.
 
-IMPORTANT: `CONTEXT7_API_KEY` IS STORED IN THE .env FILE IN THE SKILL FOLDER THAT THE CONTEXT7 SKILL IS INSTALLED IN. SEARCH FOR IT THERE. .env FILES ARE HIDDEN FILES. 
+IMPORTANT: `CONTEXT7_API_KEY` is stored in 1Password under "AI Agents" vault > "Context7" > credential field.
+Load it before every call:
+
+```bash
+export CONTEXT7_API_KEY=$(op read "op://AI Agents/Context7/credential")
+```
 
 Example: 
 ~/.agents/skills/context7/.env
@@ -26,7 +31,7 @@ Example:
 ### 1. Search for the library
 
 ```bash
-python3 ~/.codex/skills/context7/scripts/context7.py search "<library-name>"
+export CONTEXT7_API_KEY=$(op read "op://AI Agents/Context7/credential") && python3 ~/.agents/skills/context7/scripts/context7.py search "<library-name>"
 ```
 
 Example:

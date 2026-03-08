@@ -854,3 +854,15 @@ Every report must:
 [Findings, synthesis, and report content generated here]
 
 **Note:** This section remains empty in the skill definition. Content populated during runtime only.
+
+---
+
+## Obsidian Research Tracking (MANDATORY)
+
+**Before starting any research:** Check for and use the `research-tracker-matt` skill to create a research project in the 2brain Obsidian vault. Every deep-research run MUST have a corresponding project in `10_PROJECTS/Active/`.
+
+**During research:** Update Research.md and Tasks.md in real time via `research-tracker-matt`.
+
+**After research:** Complete the project via `research-tracker-matt` (fill Decision.md, extract to Resources, archive).
+
+If `research-tracker-matt` is not available, note in the output that findings were NOT tracked in Obsidian.

@@ -16,9 +16,10 @@
     }
   },
   "preferences": {
-    "chromeExtensionEnabled": false,
+    "chromeExtensionEnabled": true,
     "quickEntryShortcut": "off",
     "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
     "sidebarMode": "chat",
     "coworkWebSearchEnabled": true
   }

@@ -7,7 +7,7 @@
       "name": "talk-mode-fix-watch",
       "enabled": true,
       "createdAtMs": 1772638112308,
-      "updatedAtMs": 1772820263747,
+      "updatedAtMs": 1772931764702,
       "schedule": {
         "kind": "cron",
         "expr": "0 * * * *",
@@ -25,15 +25,14 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772823863747,
-        "lastRunAtMs": 1772820262412,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 1335,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 30,
-        "lastError": "400 google/gemini-2.5-flash-preview is not a valid model ID"
+        "nextRunAtMs": 1772935346068,
+        "lastRunAtMs": 1772931758126,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 6576,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     },
     {
@@ -42,7 +41,7 @@
       "name": "lockhill-booking-check",
       "enabled": true,
       "createdAtMs": 1772656015646,
-      "updatedAtMs": 1772816401962,
+      "updatedAtMs": 1772932004181,
       "schedule": {
         "kind": "cron",
         "expr": "0 10 * * *"
@@ -59,15 +58,14 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1772902800000,
-        "lastRunAtMs": 1772816400027,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 1935,
+        "nextRunAtMs": 1772985600000,
+        "lastRunAtMs": 1772931932011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 72170,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 2,
-        "lastError": "400 google/gemini-2.5-flash-preview is not a valid model ID"
+        "consecutiveErrors": 0
       }
     }
   ]

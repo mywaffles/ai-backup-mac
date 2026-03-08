@@ -1,0 +1,49 @@
+2026-03-07T01:10:32.623Z [DEBUG] detectFileEncoding failed for expected reason: ENOENT
+2026-03-07T01:10:32.623Z [DEBUG] MDM settings load completed in 9ms
+2026-03-07T01:10:32.642Z [DEBUG] [init] configureGlobalMTLS starting
+2026-03-07T01:10:32.642Z [DEBUG] [init] configureGlobalMTLS complete
+2026-03-07T01:10:32.642Z [DEBUG] [init] configureGlobalAgents starting
+2026-03-07T01:10:32.642Z [DEBUG] [init] configureGlobalAgents complete
+2026-03-07T01:10:32.647Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-03-07T01:10:32.647Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=false, result=false
+2026-03-07T01:10:32.647Z [DEBUG] [STARTUP] Running setup()...
+2026-03-07T01:10:32.648Z [DEBUG] Git remote URL: null
+2026-03-07T01:10:32.648Z [DEBUG] No git remote URL found
+2026-03-07T01:10:32.648Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/mattabar/.claude/skills, project=[]
+2026-03-07T01:10:32.648Z [DEBUG] Error log sink initialized
+2026-03-07T01:10:32.649Z [DEBUG] [STARTUP] setup() completed in 2ms
+2026-03-07T01:10:32.649Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-03-07T01:10:32.650Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-03-07T01:10:32.650Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-03-07T01:10:32.650Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-03-07T01:10:32.650Z [DEBUG] Total plugin skills loaded: 0
+2026-03-07T01:10:32.650Z [DEBUG] Total plugin commands loaded: 0
+2026-03-07T01:10:32.650Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-03-07T01:10:32.650Z [DEBUG] Total plugin agents loaded: 0
+2026-03-07T01:10:32.659Z [DEBUG] Loaded 28 unique skills (28 unconditional, 0 conditional, managed: 0, user: 28, project: 0, additional: 0, legacy commands: 0)
+2026-03-07T01:10:32.659Z [DEBUG] getSkills returning: 28 skill dir commands, 0 plugin skills, 5 bundled skills
+2026-03-07T01:10:32.659Z [DEBUG] [STARTUP] Commands and agents loaded in 10ms
+2026-03-07T01:10:32.659Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-03-07T01:10:32.659Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-03-07T01:10:32.659Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-03-07T01:10:32.660Z [DEBUG] Total LSP servers loaded: 0
+2026-03-07T01:10:32.660Z [DEBUG] [STARTUP] MCP configs loaded in 13ms
+2026-03-07T01:10:32.661Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-03-07T01:10:32.661Z [DEBUG] LSP manager initialized with 0 servers
+2026-03-07T01:10:32.661Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-03-07T01:10:32.661Z [DEBUG] LSP server manager initialized successfully
+2026-03-07T01:10:32.661Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-03-07T01:10:32.661Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-03-07T01:10:32.666Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-03-07T01:10:32.666Z [DEBUG] [3P telemetry] isTelemetryEnabled=false (CLAUDE_CODE_ENABLE_TELEMETRY=undefined)
+2026-03-07T01:10:32.666Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-03-07T01:10:32.670Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-03-07T01:10:32.670Z [DEBUG] Found 0 hook matchers in settings
+2026-03-07T01:10:32.670Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-03-07T01:10:32.671Z [DEBUG] installPluginsForHeadless: starting
+2026-03-07T01:10:32.671Z [DEBUG] Found 0 installed plugins
+2026-03-07T01:10:32.671Z [DEBUG] installPluginsForHeadless: no missing plugins or marketplaces configured
+2026-03-07T01:10:32.673Z [DEBUG] Security messages are fresh (<1h old), skipping fetch
+2026-03-07T01:10:32.673Z [DEBUG] Watching for changes in skill/command directories: /Users/mattabar/.claude/skills...
+2026-03-07T01:10:32.674Z [DEBUG] Total plugin output styles loaded: 0
+2026-03-07T01:10:32.674Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK

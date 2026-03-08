@@ -1,0 +1,73 @@
+{
+  "cachedGrowthBookFeatures": {
+    "tengu_event_sampling_config": {},
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_marble_anvil": true,
+    "tengu_tool_pear": false,
+    "tengu_scarf_coffee": false,
+    "tengu_claudeai_mcp_connectors": true,
+    "tengu_keybinding_customization_release": true,
+    "tengu_slate_nexus": false,
+    "tengu_amber_quartz": false,
+    "tengu_thinkback": false,
+    "tengu_chomp_inflection": false,
+    "tengu_marble_sandcastle": true,
+    "tengu_penguins_off": null,
+    "tengu_marble_lantern_disabled": false,
+    "tengu_pebble_leaf_prune": false,
+    "tengu_mcp_elicitation": false,
+    "tengu_mulberry_fog": false,
+    "tengu_coral_fern": false,
+    "tengu_summarize_tool_results": false,
+    "tengu_bergotte_lantern": false,
+    "tengu_swann_brevity": "focused",
+    "tengu_system_prompt_global_cache": false,
+    "enhanced_telemetry_beta": false,
+    "tengu_streaming_tool_execution2": true,
+    "tengu_moth_copse": false,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_fgts": false,
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_attribution_header": false,
+    "tengu_prompt_cache_1h_config": {
+      "allowlist": [
+        "repl_main_thread*",
+        "sdk",
+        "auto_mode"
+      ]
+    },
+    "tengu_coral_whistle": false
+  },
+  "firstStartTime": "2026-03-02T22:35:54.819Z",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "projects": {
+    "/Users/mattabar/Downloads/CodeTest": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    }
+  },
+  "userID": "50714803f4842fd341e20a6e5b2a1ba98b0e1c4dd3be88440126e7bc31b29e31",
+  "cachedExtraUsageDisabledReason": null,
+  "skillUsage": {
+    "joke-jerry-seinfeld": {
+      "usageCount": 1,
+      "lastUsedAt": 1772845518420
+    }
+  },
+  "toolUsage": {
+    "Skill": {
+      "usageCount": 1,
+      "lastUsedAt": 1772845518424
+    }
+  }
+}

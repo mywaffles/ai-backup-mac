@@ -37,3 +37,10 @@ When the user asks to validate structure or project health:
 2. Run `scripts/validate.sh <path>` (or omit path to use current directory).
 3. Save report output to `PARA-validation-YYYY-MM-DD.md` if user wants a file.
 4. Summarize critical findings and recommended next actions.
+
+## Research Projects
+
+For creating, tracking, and completing research projects, **use the `research-tracker-matt` skill**.
+It owns the full research project lifecycle (create → track → complete → archive) and ensures
+findings are tracked in real time in the 2brain vault. This skill (para-second-brain) handles
+PARA classification, inbox processing, and reviews — not research project operations.

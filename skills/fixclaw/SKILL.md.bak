@@ -1,0 +1,237 @@
+---
+name: fixclaw
+description: >
+  Diagnose and repair OpenClaw problems automatically. Use this skill whenever
+  something is wrong with OpenClaw, the gateway, channels (Telegram, BlueBubbles,
+  Discord), agents, cron jobs, sessions, or skills. Triggers on: "fix openclaw",
+  "fixclaw", "claw is broken", "gateway won't start", "Telegram not working",
+  "BlueBubbles down", "agent not responding", "openclaw error", "openclaw health
+  shows errors", "cron not running", "messages not sending", "check openclaw",
+  "repair openclaw", or any complaint about OpenClaw misbehaving. Also use when
+  the user says "/fixclaw" with optional context about what's wrong. If necessary,
+  restores the last backup using the ai-backup-mac skill. All commands run on the
+  user's Mac Mini via shell:run_command.
+---
+
+# FixClaw — OpenClaw Auto-Repair
+
+Diagnoses and fixes OpenClaw problems on Matt's Mac Mini M4.
+
+## Philosophy
+
+1. **Gather before acting** — run diagnostics first, understand the problem
+2. **Fix non-destructively** — prefer config corrections over restarts, restarts over reinstalls
+3. **Backup before destructive changes** — run `ai-backup` before modifying config files
+4. **Report what you did** — always summarize findings and actions taken
+
+---
+
+## Diagnostic Sequence
+
+Run these in order. Stop early if the problem is obvious and fixable.
+
+### Phase 1: Quick Health Check
+
+```bash
+openclaw health 2>&1
+```
+
+This gives channel status (Telegram, BlueBubbles), agent list, heartbeat info,
+and recent sessions. Look for:
+- Channel failures (e.g., `Telegram: failed (404)`)
+- Missing agents
+- Stale sessions
+
+### Phase 2: Doctor (Detailed Diagnostics)
+
+```bash
+openclaw doctor --non-interactive 2>&1
+```
+
+This checks:
+- State integrity (orphan transcripts, corrupted session store)
+- Duplicate gateway services (old plist files)
+- Gateway token mismatches (service token vs config token)
+- Security warnings (LAN binding, weak auth)
+- Skills eligibility
+- Plugin status
+
+### Phase 3: Logs (If Problem Unclear)
+
+```bash
+openclaw logs --limit 100 --plain --no-color 2>&1
+```
+
+Look for:
+- Repeated errors or stack traces
+- API key failures (401/403)
+- Connection timeouts
+- Channel-specific errors
+
+### Phase 4: System-Level Checks
+
+```bash
+# Is the gateway process running?
+pgrep -fl openclaw 2>&1
+
+# Is the gateway port open?
+lsof -i :18789 2>&1
+
+# LaunchAgent status
+launchctl list | grep openclaw 2>&1
+
+# Node host status
+launchctl list | grep ai.openclaw 2>&1
+```
+
+---
+
+## Common Problems & Fixes
+
+### Telegram: failed (404)
+**Cause:** Bot token invalid, bot deleted, or webhook stale.
+```bash
+# Check current config
+openclaw config get channels.telegram 2>&1
+
+# Re-test the bot token
+TOKEN=$(openclaw config get channels.telegram.botToken 2>&1 | tr -d '"')
+curl -s "https://api.telegram.org/bot${TOKEN}/getMe" 2>&1
+```
+- If `getMe` returns `{"ok":false}` → token is dead, user needs to regenerate via @BotFather
+- If `getMe` returns `{"ok":true}` → restart gateway: `openclaw gateway restart`
+
+### BlueBubbles: failed
+**Cause:** BlueBubbles server not running, or password/URL changed.
+```bash
+# Check if BlueBubbles is running
+pgrep -fl BlueBubbles 2>&1
+
+# Check config
+openclaw config get channels.bluebubbles 2>&1
+
+# Test connection
+BB_URL=$(openclaw config get channels.bluebubbles.serverUrl 2>&1 | tr -d '"')
+BB_PASS=$(openclaw config get channels.bluebubbles.password 2>&1 | tr -d '"')
+curl -s "${BB_URL}/api/v1/server/info?password=${BB_PASS}" 2>&1 | head -c 200
+```
+- If BlueBubbles not running → `open -a BlueBubbles`
+- If password mismatch → read from BlueBubbles config.db:
+  ```bash
+  sqlite3 ~/Library/Application\ Support/bluebubbles-server/config.db \
+    "SELECT value FROM config WHERE key='password';" 2>&1
+  ```
+  Then update: `openclaw config set channels.bluebubbles.password "<new_password>"`
+
+### Gateway token mismatch
+**Cause:** Config was updated but the LaunchAgent still has the old token.
+```bash
+# Get config token
+openclaw config get gateway.auth.token 2>&1
+
+# Get service token
+grep OPENCLAW_GATEWAY_TOKEN ~/Library/LaunchAgents/ai.openclaw.node.plist 2>&1
+```
+Fix: `openclaw doctor --fix --non-interactive`
+
+### Gateway not running
+```bash
+# Check if anything is on the port
+lsof -i :18789 2>&1
+
+# Try starting
+openclaw gateway start 2>&1
+
+# If port conflict, force
+openclaw gateway --force 2>&1
+
+# If LaunchAgent is stale
+launchctl bootout gui/$(id -u)/ai.openclaw.node 2>&1
+openclaw node install 2>&1
+openclaw node start 2>&1
+```
+
+### Orphan transcripts / stale sessions
+```bash
+openclaw doctor --fix --non-interactive 2>&1
+```
+
+### Old gateway plist lingering
+```bash
+launchctl bootout gui/$(id -u)/ai.openclaw.gateway 2>/dev/null
+rm -f ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+```
+
+### API key errors (OpenRouter 401/403)
+```bash
+# Check current model config
+openclaw models status 2>&1
+
+# Test the key
+OPENROUTER_KEY=$(openclaw config get models.providers.openrouter.apiKey 2>&1 | tr -d '"')
+curl -s -H "Authorization: Bearer ${OPENROUTER_KEY}" \
+  https://openrouter.ai/api/v1/models 2>&1 | head -c 200
+```
+- If 401 → key disabled. User must re-enable at https://openrouter.ai/settings/keys
+- After re-enabling: `openclaw gateway restart`
+
+### Cron jobs not firing
+```bash
+openclaw cron status 2>&1
+openclaw cron list 2>&1
+
+# Test a specific job
+openclaw cron run <job-id> 2>&1
+```
+
+### Skills not loading
+```bash
+openclaw skills check 2>&1
+```
+Look for "Missing requirements" — usually a missing binary or env var.
+
+---
+
+## Escalation: Backup & Restore
+
+If the problem requires config changes that could make things worse, or if
+config is corrupted beyond simple fixes:
+
+### Before any destructive fix
+```bash
+ai-backup
+```
+
+### Restore last known good state
+```bash
+ai-restore --last
+```
+
+### Nuclear option (full config reset)
+Only if nothing else works:
+```bash
+ai-backup  # always backup first
+openclaw reset
+openclaw configure  # re-run setup wizard
+```
+
+---
+
+## Response Format
+
+After running diagnostics and applying fixes, report back concisely:
+
+```
+🦞 FixClaw Report
+─────────────────
+Problems found:
+- [what was wrong]
+
+Actions taken:
+- [what was fixed]
+
+Still needs attention:
+- [anything requiring user action, e.g., regenerate a bot token]
+```
+
+If everything is clean: `🦞 OpenClaw is healthy. No issues found.`
