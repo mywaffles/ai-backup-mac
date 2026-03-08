@@ -41,7 +41,7 @@
       "name": "lockhill-booking-check",
       "enabled": true,
       "createdAtMs": 1772656015646,
-      "updatedAtMs": 1772932004181,
+      "updatedAtMs": 1772937733724,
       "schedule": {
         "kind": "cron",
         "expr": "0 10 * * *"
@@ -50,23 +50,25 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Check Lockhill escape room website (https://www.lockhill.gr) for booking availability for July 9-10, 2026. Target rooms: Sanatorium (Midnight Mode, 2.5h) and Chapel & Catacombs (2h). If slots are available, notify Matt immediately with booking link. If not available yet, reply NO_REPLY (silent check). Stop checking after bookings are made or we're past the target dates.",
+        "message": "Check AgentMail (gaydeceiver@agentmail.to) for new unprocessed messages from Matt and spawn a dedicated Cowork task for each one.\n\nStep 1 — Poll for new messages and save to file:\npython3 << 'PY'\nimport json, urllib.request\n\nkey = open('/Users/mattabar/.agents/skills/agentmail/.env_dir/api_key.txt').read().strip()\nreq = urllib.request.Request(\n    'https://api.agentmail.to/v0/inboxes/gaydeceiver@agentmail.to/messages?limit=10',\n    headers={'Authorization': f'Bearer {key}'}\n)\ndata = json.loads(urllib.request.urlopen(req).read())\nwith open('/tmp/am_poll_msgs.txt', 'w') as f:\n    json.dump(data, f)\nprint(f\"Fetched {data.get('count', 0)} messages\")\nPY\n\nStep 2 — Find unprocessed messages and save to /tmp/am_new_msgs.txt:\npython3 << 'PY'\nimport json\n\nwith open('/tmp/am_poll_msgs.txt') as f: data = json.load(f)\n\nprocessed_path = '/Users/mattabar/.agents/skills/agentmail/state/processed_ids.json'\ntry:\n    with open(processed_path) as f: processed = json.load(f)\nexcept: processed = []\n\nnew_msgs = []\nfor m in data.get('messages', []):\n    is_sent = 'sent' in m.get('labels', [])\n    is_from_matt = 'mattaabar@gmail.com' in m.get('from', '')\n    already_processed = m.get('message_id', '') in processed\n    if not is_sent and is_from_matt and not already_processed:\n        new_msgs.append({\n            'message_id': m['message_id'],\n            'subject': m.get('subject', ''),\n            'preview': m.get('preview', '')\n        })\n\nwith open('/tmp/am_new_msgs.txt', 'w') as f:\n    json.dump(new_msgs, f)\n\nif not new_msgs:\n    print('NO_NEW_MESSAGES')\nelse:\n    print(f\"Found {len(new_msgs)} new message(s):\")\n    for m in new_msgs:\n        print(f\"  - [{m['message_id'][:20]}] {m['subject']}\")\nPY\n\nStep 3 — If output was NO_NEW_MESSAGES, stop here.\n\nStep 4 — For each new message, do ALL of the following:\n\na. Send an immediate acknowledgment reply:\npython3 << 'PY'\nimport json, urllib.request\n\nkey = open('/Users/mattabar/.agents/skills/agentmail/.env_dir/api_key.txt').read().strip()\nnew_msgs = json.load(open('/tmp/am_new_msgs.txt'))\n\nconfig = json.load(open('/Users/mattabar/.openclaw/openclaw.json'))\ntoken = config['gateway']['auth']['token']\nport = config['gateway'].get('port', 18789)\n\nfor m in new_msgs:\n    msg_id = m['message_id']\n    short_id = msg_id.replace('<','').replace('>','').replace('@','_').replace('.','_')[:16]\n    session_id = f\"agentmail-{short_id}\"\n    dashboard_url = f\"http://127.0.0.1:{port}/#token={token}&session={session_id}\"\n\n    ack = f\"Got it! Working on: \\\"{m['subject']}\\\"\\n\\nSession: {session_id}\\nDashboard: {dashboard_url}\\n\\nI'll reply here when done.\"\n    body = json.dumps({'to': ['mattaabar@gmail.com'], 'text': ack, 'html': '<p>' + ack.replace('\\n', '</p><p>') + '</p>'})\n    req = urllib.request.Request(\n        f'https://api.agentmail.to/v0/inboxes/gaydeceiver@agentmail.to/messages/{msg_id}/reply',\n        data=body.encode(),\n        headers={'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'},\n        method='POST'\n    )\n    result = urllib.request.urlopen(req).read().decode()\n    print(f\"Ack sent for '{m['subject']}': {result[:80]}\")\nPY\n\nb. Mark all new messages as processed immediately:\npython3 << 'PY'\nimport json\n\nprocessed_path = '/Users/mattabar/.agents/skills/agentmail/state/processed_ids.json'\ntry:\n    with open(processed_path) as f: ids = json.load(f)\nexcept: ids = []\n\nnew_msgs = json.load(open('/tmp/am_new_msgs.txt'))\nfor m in new_msgs:\n    ids.append(m['message_id'])\nids = ids[-100:]\n\nwith open(processed_path, 'w') as f:\n    json.dump(ids, f)\nprint('Marked processed:', [m['message_id'][:30] for m in new_msgs])\nPY\n\nc. Spawn a dedicated OpenClaw session for each message:\npython3 << 'PY'\nimport json, subprocess\n\nkey = open('/Users/mattabar/.agents/skills/agentmail/.env_dir/api_key.txt').read().strip()\nnew_msgs = json.load(open('/tmp/am_new_msgs.txt'))\n\nfor m in new_msgs:\n    msg_id = m['message_id']\n    short_id = msg_id.replace('<','').replace('>','').replace('@','_').replace('.','_')[:16]\n    session_id = f\"agentmail-{short_id}\"\n\n    prompt = f\"\"\"You are handling an AgentMail request from Matt (mattaabar@gmail.com).\n\nMessage ID: {msg_id}\nSubject: {m['subject']}\n\nStep 1 - Read the full message body:\npython3 -c \"\nimport json, urllib.request\nkey = open('/Users/mattabar/.agents/skills/agentmail/.env_dir/api_key.txt').read().strip()\nreq = urllib.request.Request('https://api.agentmail.to/v0/inboxes/gaydeceiver@agentmail.to/messages/{msg_id}', headers={{'Authorization': f'Bearer {{key}}'}})\nprint(json.dumps(json.loads(urllib.request.urlopen(req).read()), indent=2))\n\"\n\nStep 2 - Execute Matt's request using all available tools and skills.\nIf ambiguous, note your assumptions or ask for clarification.\n\nStep 3 - Write your reply to /tmp/am_reply_{short_id}.txt, then send it:\npython3 << 'PYREPLY'\nimport json, urllib.request\nkey = open('/Users/mattabar/.agents/skills/agentmail/.env_dir/api_key.txt').read().strip()\nreply_text = open('/tmp/am_reply_{short_id}.txt').read()\nbody = json.dumps({{'to': ['mattaabar@gmail.com'], 'text': reply_text, 'html': '<p>' + reply_text.replace(chr(10), '</p><p>') + '</p>'}})\nreq = urllib.request.Request(\n    'https://api.agentmail.to/v0/inboxes/gaydeceiver@agentmail.to/messages/{msg_id}/reply',\n    data=body.encode(),\n    headers={{'Authorization': f'Bearer {{key}}', 'Content-Type': 'application/json'}},\n    method='POST'\n)\nprint(urllib.request.urlopen(req).read().decode())\nPYREPLY\n\nAlways reply so Matt knows the outcome.\"\"\"\n\n    with open(f'/tmp/am_prompt_{short_id}.txt', 'w') as f:\n        f.write(prompt)\n\n    subprocess.Popen(\n        ['openclaw', 'agent', '--session-id', session_id, '--message', prompt],\n        stdout=open(f'/tmp/am_session_{short_id}.log', 'w'),\n        stderr=subprocess.STDOUT\n    )\n    print(f\"Spawned session '{session_id}' for: {m['subject']}\")\nPY",
         "model": "openrouter/anthropic/claude-sonnet-4.5"
       },
       "delivery": {
         "mode": "announce",
-        "channel": "last"
+        "channel": "last",
+        "bestEffort": false
       },
       "state": {
         "nextRunAtMs": 1772985600000,
-        "lastRunAtMs": 1772931932011,
+        "lastRunAtMs": 1772937718253,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 72170,
+        "lastDurationMs": 15471,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
-      }
+      },
+      "deleteAfterRun": false
     }
   ]
 }
